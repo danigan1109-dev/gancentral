@@ -209,7 +209,7 @@ textarea{min-height:64px;resize:vertical}
 .idxin::-webkit-scrollbar{display:none}
 .idxin a{flex:none;text-decoration:none;color:var(--muted);font:600 12px/1 var(--display);letter-spacing:.07em;text-transform:uppercase;padding:7px 9px;border-radius:999px;border:1px solid transparent}
 .idxin a:hover{color:var(--ink);border-color:var(--line);background:var(--night-2)}
-section,.card{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 140px)}
+section,.card{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 176px)}
 /* cómo apuntarse arriba */
 .apunt{padding-block:28px 8px}
 .apbox{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:20px 24px;border:1px solid rgba(255,123,46,.35);border-radius:14px;background:linear-gradient(120deg,rgba(255,123,46,.12),rgba(176,36,159,.14))}
@@ -356,14 +356,14 @@ a.state.go:hover{background:rgba(95,211,154,.24)}
 .mas{display:none}
 .mmore,.nm{display:none}
 .star{border:1px solid var(--line);background:none;color:var(--muted);border-radius:999px;padding:6px 10px;font:600 12px/1 var(--body);cursor:pointer;white-space:nowrap;margin-left:auto;margin-right:8px}
-.mcard{scroll-margin-top:150px}
+.mcard{scroll-margin-top:186px}
 .mcard .foot{flex-wrap:wrap;row-gap:8px}
 .star:hover{color:var(--ink);border-color:var(--gold)}
 .star.on{color:var(--gold);border-color:var(--gold);background:rgba(255,196,64,.08)}
-.tick{display:flex;align-items:stretch;background:linear-gradient(90deg,#2a0f3a,#1d1130);border-bottom:1px solid var(--line);overflow:hidden;font:600 13.5px/1 var(--body)}
+.tick{display:flex;align-items:stretch;border-top:1px solid var(--line);background:linear-gradient(90deg,#2a0f3a,#1d1130);border-bottom:1px solid var(--line);overflow:hidden;font:600 13.5px/1 var(--body)}
 .tickl{flex:none;display:flex;align-items:center;padding:0 14px;background:var(--magenta);color:#fff;font:700 11.5px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;position:relative;z-index:1;box-shadow:6px 0 12px rgba(0,0,0,.35)}
 .tickv{flex:1;overflow:hidden;position:relative}
-.tickt{display:inline-flex;white-space:nowrap;padding:10px 0;animation:tickmv var(--dur,30s) linear infinite}
+.tickt{display:inline-flex;white-space:nowrap;padding:8px 0;animation:tickmv var(--dur,30s) linear infinite}
 .tickt .tdup{display:inline-flex}
 .tick:hover .tickt,.tick:focus-within .tickt,.tick:active .tickt{animation-play-state:paused}
 .tickt a,.tickt span{color:var(--ink);text-decoration:none;padding:0 6px}
@@ -411,8 +411,8 @@ a.state.go:hover{background:rgba(95,211,154,.24)}
   #apuntarse .apbox .step{flex:0 0 72%;scroll-snap-align:start;padding:12px 14px;border:1px solid var(--line);border-left:2px solid var(--magenta-2);border-radius:10px;background:rgba(0,0,0,.18)}
   #apuntarse .aphead::after{content:'Desliza →';display:block;margin-top:4px;color:var(--muted);font-size:12px;letter-spacing:.04em}
   .mia>img{width:96px}
-  .mcard{scroll-margin-top:84px}
-  section{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 76px)}
+  .mcard{scroll-margin-top:120px}
+  section{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 112px)}
   .miaw{font-size:14px}
   .star{margin-right:0;padding:5px 8px;font-size:11px}
   .gm:not(.bo) .bio,.gm:not(.bo) .gmm{display:none}
@@ -786,9 +786,8 @@ function viewPublic(){
   var h = '';
   var idx=(ms.some(function(m){return esMia(m.id);})?[['mispartidas','Mis partidas']]:[]).concat((S.porque||[]).length?[['porque','Por qué Gan Central']]:[]).concat([['comojugamos','Cómo jugamos'],['apuntarse','Cómo apuntarse']]).concat([['mesas','Mesas'],['solicitar','Solicita tu partida'],['calendario','Calendario'],['proximamente','Próximamente']]).concat((S.bonos||[]).length?[['bonos','Bonos']]:[]).concat([['narradores','Narradores']]).concat((S.faq||[]).length?[['faq','Preguntas frecuentes']]:[]).concat((S.posts||[]).length?[['blog','Blog']]:[]).concat(REDES.some(function(r){return (S.redes||{})[r.k];})?[['redes','Redes']]:[]);
   h += '<header class="bar"><div class="wrap"><a class="brand" href="#inicio"><img src="'+img('logo')+'" alt="">Gan Central</a><nav class="nav"><a class="btn sm" href="'+esc(S.telegram)+'" target="_blank" rel="noopener">'+TG+'Telegram</a><button class="burger" data-act="menu" aria-expanded="'+(!!ui.menu)+'" aria-controls="mnu" aria-label="'+(ui.menu?'Cerrar menú':'Abrir menú')+'"><span></span><span></span><span></span></button></nav></div>'+'<div class="idx"><div class="wrap"><nav class="idxin" aria-label="Índice">'+idx.map(function(x){return '<a href="#'+x[0]+'">'+esc(x[1])+'</a>';}).join('')+'</nav></div></div>'
+    +viewTicker()
     +(ui.menu?'<nav id="mnu" class="mnu" aria-label="Secciones"><div class="wrap">'+idx.map(function(x){return '<a href="#'+x[0]+'" data-act="mgo">'+esc(x[1])+'<span>›</span></a>';}).join('')+'</div></nav>':'')+'</header>';
-
-  h += viewTicker();
 
   h += '<div class="hero" id="inicio" style="--hero:url('+img('hero')+')"><div class="wrap"><img class="logo" src="'+img('logo')+'" alt="Logo de Gan Central">'
      + '<div><span class="eyebrow">Rol</span><h1>'+esc(S.titulo)+'</h1><div class="rule"></div>'
