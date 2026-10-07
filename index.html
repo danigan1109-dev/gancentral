@@ -612,12 +612,13 @@ function viewRedes(){
 
 function estadoTxt(m){ if(m.estado==='libre'){ var n=+m.plazas||0; return n? n+(n===1?' plaza libre':' plazas libres') : 'Plazas libres'; } return (m.estado==='espera'||m.estado==='completa')?'Completa':(ESTADOS[m.estado]||m.estado); }
 function pedirURL(m){ var n=gm(m.narrador); var t='Hola Dani, quiero pedir plaza en la mesa «'+m.titulo+'» ('+m.sistema+', narra '+n.nombre+'). He visto en la web que quedan plazas libres.'; return 'https://t.me/'+encodeURIComponent(S.contactoTg||'')+'?text='+encodeURIComponent(t); }
+function shareFile(id){ try{ var im=document.querySelector('#m-'+id+' img.pic'); if(!im||!im.naturalWidth) return null; var w=Math.min(1280,im.naturalWidth), hh=Math.round(im.naturalHeight*w/im.naturalWidth), c=document.createElement('canvas'); c.width=w; c.height=hh; c.getContext('2d').drawImage(im,0,0,w,hh); var d=atob(c.toDataURL('image/jpeg',0.88).split(',')[1]), u=new Uint8Array(d.length); for(var i=0;i<d.length;i++) u[i]=d.charCodeAt(i); return new File([u],id+'.jpg',{type:'image/jpeg'}); }catch(e){ return null; } }
 function mesaURL(m){ var base=(S.webUrl||'').trim(); return base ? base.replace(/#.*$/,'')+'#m-'+m.id : ''; }
 function mesaFechas(m){
   var now=Date.now(), occ=occurrences(now, now+183*86400000).filter(function(x){return x.m===m;});
   var open=!!ui.fc[m.id], h='<div class="mfc">';
   h+='<div class="mfc-bar">'+(m.estado==='libre'&&S.contactoTg?'<a class="btn sm ok" href="'+esc(pedirURL(m))+'" target="_blank" rel="noopener">'+TG+'Pedir plaza</a>':'')+(occ.length?'<button class="btn sm ghost" data-act="fc" data-id="'+esc(m.id)+'" aria-expanded="'+open+'">'+CAL+(open?'Ocultar fechas':'Fechas y calendario ('+Math.min(occ.length,12)+')')+'</button>':'')
-    +(mesaURL(m)?'<button class="btn sm ghost" data-act="copy" data-id="'+esc(m.id)+'" title="Copia el enlace directo a esta mesa">'+(ui.copied===m.id?'¡Enlace copiado!':'Copiar enlace')+'</button>':'')+'</div>';
+    +(mesaURL(m)?'<button class="btn sm warm" data-act="share" data-id="'+esc(m.id)+'" title="Comparte la mesa con su imagen y la próxima fecha">'+(ui.copied==='s'+m.id?'¡Mensaje copiado!':'Compartir')+'</button>':'')+(mesaURL(m)?'<button class="btn sm ghost" data-act="copy" data-id="'+esc(m.id)+'" title="Copia el enlace directo a esta mesa">'+(ui.copied===m.id?'¡Enlace copiado!':'Copiar enlace')+'</button>':'')+'</div>';
   if(ui.copied==='x'+m.id) h+='<p class="note" style="margin:0">Copia este enlace: <input class="cpy" readonly value="'+esc(mesaURL(m))+'" onclick="this.select()"></p>';
   if(open&&occ.length){
     h+='<ul class="mfl">'+occ.slice(0,12).map(function(x){return '<li><span><b>'+esc(fmt(x.t,{weekday:'short',day:'numeric',month:'short'}))+'</b> · '+hora(x.t)+'</span>'+gbtn(x,'Google Calendar')+'</li>';}).join('')+'</ul>';
@@ -1119,6 +1120,11 @@ app.addEventListener('click', function(ev){
   else if(a==='copy'){ var mm=S.mesas.filter(function(z){return z.id===b.dataset.id;})[0]; var url=mesaURL(mm);
     var done=function(){ ui.copied=mm.id; render(); setTimeout(function(){ if(ui.copied===mm.id){ui.copied=null;render();} },2500); };
     try{ navigator.clipboard.writeText(url).then(done,function(){ ui.copied='x'+mm.id; render(); }); }catch(e){ ui.copied='x'+mm.id; render(); } }
+  else if(a==='share'){ var sm=S.mesas.filter(function(z){return z.id===b.dataset.id;})[0]; if(!sm) return;
+    var sx=nextOcc(sm), sn=S.narradores.filter(function(z){return z.id===sm.narrador;})[0], sd=sx?fmt(sx.t,{weekday:'long',day:'numeric',month:'long'}):'';
+    var st='🎲 '+sm.titulo+'\n'+(sx?'📅 Próxima sesión: '+sd.charAt(0).toUpperCase()+sd.slice(1)+' · '+parts(sx.t,TZ).hm+' (hora de España)\n':'')+(sn?'🎭 Narra '+sn.nombre+'\n':'')+'👉 '+mesaURL(sm);
+    if(navigator.share){ var sf=shareFile(sm.id), sdata={title:sm.titulo,text:st}; try{ if(sf&&navigator.canShare&&navigator.canShare({files:[sf],text:st})) sdata.files=[sf]; }catch(e){} navigator.share(sdata).catch(function(){}); }
+    else { var sok=function(){ ui.copied='s'+sm.id; render(); setTimeout(function(){ if(ui.copied==='s'+sm.id){ui.copied=null;render();} },2500); }; try{ navigator.clipboard.writeText(st).then(sok,function(){}); }catch(e){} } }
   else if(a==='ev'){ ui.sel = ui.sel===b.dataset.k ? null : b.dataset.k; render(); }
 });
 app.addEventListener('input', function(ev){
