@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Umbraelis · Gan Central</title>
+<meta name="description" content="Umbraelis: el mundo de Sombras de la Ascensión. Un mundo dominado por necrópolis, dioses encadenados y un linaje olvidado. Explora el mapa y sus regiones.">
+<link rel="canonical" href="https://gancentral.com/umbraelis/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gan Central">
+<meta property="og:title" content="Umbraelis · El mundo está roto">
+<meta property="og:description" content="Explora el mapa y las regiones de Umbraelis, el mundo de Sombras de la Ascensión.">
+<meta property="og:url" content="https://gancentral.com/umbraelis/">
+<meta property="og:image" content="https://gancentral.com/umbraelis/img/mapa-mundo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e0b09">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script data-goatcounter="https://danigan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+:root{
+  --bg:#0e0b09; --bg2:#17120e; --bg3:#221a13; --line:#3d2f21;
+  --gold:#d8b46a; --gold2:#b8893f; --ash:#b8442f;
+  --text:#ece0c4; --muted:#a99b7e;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --title:'Cinzel','Cormorant Garamond',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:1.22rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* barra superior */
+header{position:sticky;top:0;z-index:50;background:rgba(14,11,9,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:18px;min-height:58px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.back{font-size:.95rem;color:var(--muted)}
+.brand{font-family:var(--title);font-weight:700;letter-spacing:.22em;font-size:1.15rem;color:var(--gold)}
+.brand:hover{text-decoration:none}
+nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+nav a{font-family:var(--title);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text);padding:8px 12px;border-radius:6px}
+nav a:hover{background:var(--bg3);text-decoration:none;color:var(--gold)}
+
+/* portada */
+.hero{position:relative;min-height:86vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;background:url("img/mapa-mundo.jpg") center/cover no-repeat;opacity:.85;filter:saturate(.95) sepia(.1)}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 50% 48%,rgba(14,11,9,.62),rgba(14,11,9,.28) 70%,rgba(14,11,9,.1) 100%),linear-gradient(180deg,rgba(14,11,9,.35) 0,rgba(14,11,9,0) 18%,rgba(14,11,9,0) 78%,var(--bg) 100%)}
+.hero .in{text-shadow:0 2px 20px rgba(0,0,0,.95),0 0 6px rgba(0,0,0,.8)}
+.hero .pitch{text-shadow:none}
+.hero .in{position:relative;z-index:1;text-align:center;padding:70px 0}
+.eyebrow{font-family:var(--title);letter-spacing:.4em;font-size:.85rem;color:var(--muted);text-transform:uppercase}
+.hero h1{font-family:var(--title);font-weight:700;font-size:clamp(2.8rem,9vw,6rem);letter-spacing:.18em;margin:.2em 0 .1em;color:var(--gold);text-shadow:0 0 40px rgba(216,180,106,.25)}
+.tag{font-size:clamp(1.5rem,3.6vw,2.2rem);font-style:italic;color:var(--text);margin:0 0 .8em}
+.pitch{max-width:760px;margin:0 auto 1.2em;color:#e2d6b8;background:rgba(14,11,9,.66);padding:18px 26px;border-radius:8px;border:1px solid rgba(216,180,106,.18);backdrop-filter:blur(3px)}
+.motto{font-style:italic;color:var(--gold2);margin:1.6em 0 2em}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;font-family:var(--title);letter-spacing:.14em;font-size:.82rem;text-transform:uppercase;padding:13px 24px;border-radius:6px;border:1px solid var(--gold);color:var(--gold)}
+.btn:hover{background:var(--gold);color:var(--bg);text-decoration:none}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.btn.solid:hover{background:var(--gold2);border-color:var(--gold2)}
+
+.tonebar{background:var(--bg2);border-bottom:1px solid var(--line);padding:38px 0}
+.tone{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tone h4{font-family:var(--title);font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;color:var(--gold);margin:0 0 .5em}
+.tone p{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+@media(max-width:800px){.tone{grid-template-columns:1fr;gap:20px}}
+
+/* secciones */
+.sec{padding:70px 0}
+.sec h2.t{font-family:var(--title);font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:clamp(1.4rem,3vw,2rem);text-align:center;margin:0 0 .3em;color:var(--text)}
+.sec .sub{text-align:center;color:var(--muted);margin:0 auto 2em;max-width:620px}
+.sep{width:70px;height:2px;background:var(--gold);margin:0 auto 1.4em;opacity:.7}
+
+/* mapa */
+.mapbox{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg2);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.mapbox img{width:100%;height:auto}
+.hot{position:absolute;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;background:rgba(216,180,106,.18);border:2px solid var(--gold);display:block;cursor:pointer}
+.hot::after{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--gold)}
+.hot::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--gold);opacity:.6;animation:pulse 2.4s infinite}
+@keyframes pulse{0%{transform:scale(.7);opacity:.8}100%{transform:scale(1.5);opacity:0}}
+.hot span{position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);white-space:nowrap;background:rgba(14,11,9,.96);border:1px solid var(--gold);color:var(--text);font-family:var(--title);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 11px;border-radius:5px;opacity:0;pointer-events:none;transition:opacity .15s;z-index:3}
+.hot:hover span,.hot:focus span{opacity:1}
+.hot:hover,.hot:focus{z-index:5;background:rgba(216,180,106,.4);outline:none}
+.hint{text-align:center;color:var(--muted);font-size:.95rem;margin-top:12px}
+
+/* tarjetas */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{position:relative;display:flex;align-items:flex-end;min-height:230px;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--bg2);color:var(--text)}
+.card:hover{border-color:var(--gold);text-decoration:none}
+.card .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s}
+.card:hover .bg{transform:scale(1.06)}
+.card .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,11,9,0) 25%,rgba(14,11,9,.92))}
+.card .tx{position:relative;padding:18px 20px;z-index:1}
+.card h3{font-family:var(--title);font-weight:500;letter-spacing:.1em;font-size:1.12rem;margin:0 0 4px;color:var(--gold)}
+.card p{margin:0;font-style:italic;color:var(--muted);font-size:1rem;line-height:1.4}
+
+/* región */
+.rhero{position:relative;min-height:62vh;display:flex;align-items:flex-end;border-bottom:1px solid var(--line);overflow:hidden}
+.rhero .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.rhero .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,11,9,.25),rgba(14,11,9,.55) 55%,var(--bg))}
+.rhero .in{position:relative;z-index:1;padding:90px 0 40px;width:100%}
+.rhero h1{font-family:var(--title);font-weight:700;letter-spacing:.14em;font-size:clamp(2rem,6.5vw,4rem);color:var(--gold);margin:.1em 0 .2em;text-shadow:0 2px 30px rgba(0,0,0,.6)}
+.rhero .q{font-style:italic;font-size:clamp(1.15rem,2.6vw,1.5rem);color:var(--text);max-width:820px;margin:0}
+.crumb{font-family:var(--title);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.body{max-width:780px;margin:0 auto;padding:50px 20px 20px}
+.body h2{font-family:var(--title);font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:1.15rem;color:var(--gold);margin:2.2em 0 .6em;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.body h2:first-child{margin-top:0}
+.body p{margin:0 0 1em}
+.body ul{margin:0 0 1em;padding:0;list-style:none}
+.body li{position:relative;padding:0 0 .7em 26px}
+.body li::before{content:"◆";position:absolute;left:0;top:.18em;font-size:.72rem;color:var(--ash)}
+.body b{color:#ffe3a8;font-weight:600}
+.body li.pnj{display:flex;gap:18px;align-items:flex-start;padding-left:0;margin-bottom:.4em}
+.body li.pnj::before{display:none}
+.body li.pnj img{width:112px;height:112px;object-fit:cover;object-position:top;border:1px solid var(--line);border-radius:8px;flex:none}
+@media(max-width:600px){.body li.pnj img{width:84px;height:84px}}
+.temabox{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 1.6em;padding:12px 16px;border:1px solid var(--line);border-radius:8px;background:var(--bg2)}
+.temabox span{font-family:var(--title);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:var(--gold)}
+.temabox audio{flex:1;min-width:220px;height:36px}
+audio.tema{display:block;width:100%;max-width:420px;height:34px;margin-top:10px}
+.fig{margin:2em 0}
+.fig img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px}
+.fig figcaption{text-align:center;color:var(--muted);font-size:.95rem;margin-top:8px;font-style:italic}
+.pn{max-width:780px;margin:30px auto 0;padding:30px 20px 70px;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;border-top:1px solid var(--line)}
+.pn a{font-family:var(--title);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+
+footer{border-top:1px solid var(--line);padding:30px 0 50px;text-align:center;color:var(--muted);font-size:.95rem;background:var(--bg2)}
+footer a{color:var(--muted);text-decoration:underline}
+
+@media(max-width:640px){
+  body{font-size:1.12rem}
+  .bar{gap:8px}
+  nav{margin-left:0;width:100%}
+  .sec{padding:48px 0}
+  .hot{width:22px;height:22px}
+  .hot span{display:none}
+}
+@media(prefers-reduced-motion:reduce){.hot::before{animation:none}html{scroll-behavior:auto}.card .bg{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="back" href="/">‹ Gan Central</a>
+    <a class="brand" href="#/">UMBRAELIS</a>
+    <nav>
+      <a href="#/mapa">Mapa</a>
+      <a href="#/regiones">Regiones</a>
+      <a href="#/historia">Historia</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <div class="wrap">
+    Umbraelis · <i>Sombras de la Ascensión</i> · Una campaña de <a href="/">Gan Central</a><br>
+    <small>© Gan Central. Mundo, textos y mapas originales.</small>
+  </div>
+</footer>
+<noscript><p style="padding:40px;text-align:center">Esta página necesita JavaScript para mostrar el mapa y las regiones.</p></noscript>
+
+<script src="regiones.js"></script>
+<script>
+(function(){
+  var D = window.UMBRAELIS, app = document.getElementById('app');
+  var R = D.regiones, bySlug = {};
+  R.forEach(function(r){ bySlug[r.slug] = r; });
+
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+
+  // Pone una imagen de fondo solo si el archivo existe (si no, se queda el degradado).
+  function setBg(el, src){
+    var i = new Image();
+    i.onload = function(){ el.style.backgroundImage = 'url("'+src+'")'; };
+    i.src = src;
+  }
+  // Degradado de reserva distinto por región (tonos oscuros morado / rojo / ocre)
+  function fallback(slug){
+    var h = 0; for (var k=0;k<slug.length;k++) h = (h*31 + slug.charCodeAt(k)) % 360;
+    var hues = [18, 30, 38, 8, 24, 45];
+    var a = hues[h % hues.length], b = hues[(h+2) % hues.length];
+    return 'radial-gradient(ellipse at 30% 20%, hsla('+a+',35%,20%,.9), transparent 60%),'+
+           'radial-gradient(ellipse at 80% 80%, hsla('+b+',40%,14%,.9), transparent 55%)';
+  }
+
+  function renderSections(secs){
+    return secs.map(function(s){
+      var h = '<h2>'+esc(s.h)+'</h2>';
+      if (s.img) h += '<figure class="fig"><img src="img/'+s.img+'.jpg" alt="'+esc(s.h)+'" loading="lazy" onerror="this.parentNode.style.display=\'none\'"></figure>';
+      (s.p||[]).forEach(function(p){ h += '<p>'+p+'</p>'; });
+      if (s.ul) h += '<ul>'+s.ul.map(function(li){
+        if (typeof li === 'string') return '<li>'+li+'</li>';
+        var au = li.audio ? '<audio class="tema" controls preload="none" src="audio/'+li.audio+'.mp3"></audio>' : '';
+        return '<li class="pnj"><img src="img/'+li.img+'.jpg" alt="" loading="lazy" onerror="this.parentNode.classList.remove(\'pnj\');this.remove()"><div>'+li.t+au+'</div></li>';
+      }).join('')+'</ul>';
+      return h;
+    }).join('');
+  }
+
+  function home(){
+    var I = D.intro;
+    var hs = D.hotspots.map(function(h){
+      var r = bySlug[h.slug]; if(!r) return '';
+      return '<a class="hot" href="#/'+h.slug+'" style="left:'+h.x+'%;top:'+h.y+'%" aria-label="'+esc(r.title)+'"><span>'+esc(r.title)+'</span></a>';
+    }).join('');
+    var cards = R.map(function(r){
+      return '<a class="card" href="#/'+r.slug+'"><div class="bg" data-slug="'+r.slug+'" style="background-color:#17120e;background-image:'+fallback(r.slug)+'"></div><div class="sh"></div>'+
+             '<div class="tx"><h3>'+esc(r.title)+'</h3><p>'+esc(r.quote)+'</p></div></a>';
+    }).join('');
+    app.innerHTML =
+      '<section class="hero"><div class="wrap in">'+
+        '<div class="eyebrow">Sombras de la Ascensión</div>'+
+        '<h1>'+esc(I.title)+'</h1>'+
+        '<p class="tag">'+esc(I.tagline)+'</p>'+
+        '<p class="pitch">'+esc(I.pitch)+'</p>'+
+        (I.pitch2 ? '<p class="pitch">'+esc(I.pitch2)+'</p>' : '')+
+        '<p class="motto">'+esc(I.motto)+'</p>'+
+        '<div class="btns"><a class="btn solid" href="#/mapa">Explorar el mapa</a><a class="btn" href="#/historia">Orígenes</a></div>'+
+      '</div></section>'+
+      (I.tone ? '<section class="tonebar"><div class="wrap tone">'+I.tone.map(function(x){return '<div><h4>'+esc(x.h)+'</h4><p>'+esc(x.t)+'</p></div>';}).join('')+'</div></section>' : '')+
+      '<section class="sec" id="mapa"><div class="wrap">'+
+        '<h2 class="t">El mapa de Umbraelis</h2><div class="sep"></div>'+
+        '<p class="sub">Pasa el cursor por los puntos y entra en cada región.</p>'+
+        '<div class="mapbox"><img src="img/mapa-mundo.jpg" alt="Mapa del mundo de Umbraelis">'+hs+'</div>'+
+        '<p class="hint">En el móvil, toca un punto para abrir la región.</p>'+
+      '</div></section>'+
+      '<section class="sec" id="regiones" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="wrap">'+
+        '<h2 class="t">Regiones</h2><div class="sep"></div>'+
+        '<p class="sub">Ciudades, reinos y tierras malditas, con sus facciones y peligros.</p>'+
+        '<div class="grid">'+cards+'</div>'+
+      '</div></section>';
+    document.querySelectorAll('.card .bg').forEach(function(el){
+      var slug = el.getAttribute('data-slug'), i = new Image();
+      i.onload = function(){ el.style.backgroundImage = 'url("img/'+slug+'.jpg")'; };
+      i.src = 'img/'+slug+'.jpg';
+    });
+  }
+
+  function page(data, slug, crumb, idx){
+    var fig = data.map ? '<figure class="fig"><img src="'+data.map+'" alt="'+esc(data.mapCaption||data.title)+'" loading="lazy" onerror="this.parentNode.style.display=\'none\'"><figcaption>'+esc(data.mapCaption||'')+'</figcaption></figure>' : '';
+    var nav = '<a href="#/regiones">‹ Todas las regiones</a>';
+    if (idx !== null){
+      var prev = R[(idx-1+R.length)%R.length], next = R[(idx+1)%R.length];
+      nav = '<a href="#/'+prev.slug+'">‹ '+esc(prev.title)+'</a><a href="#/mapa">Volver al mapa</a><a href="#/'+next.slug+'">'+esc(next.title)+' ›</a>';
+    } else {
+      nav = '<a href="#/">‹ Portada</a><a href="#/mapa">Ver el mapa</a>';
+    }
+    app.innerHTML =
+      '<section class="rhero"><div class="bg" id="rbg" style="background-color:#17120e;background-image:'+fallback(slug)+'"></div><div class="sh"></div>'+
+        '<div class="wrap in"><div class="crumb">'+esc(crumb)+'</div><h1>'+esc(data.title)+'</h1><p class="q">'+esc(data.quote)+'</p></div></section>'+
+      '<article class="body">'+(data.audio ? '<div class="temabox"><span>♪ Tema de la región</span><audio controls preload="none" src="audio/'+data.audio+'.mp3"></audio></div>' : '')+renderSections(data.sections)+fig+'</article>'+
+      '<div class="pn">'+nav+'</div>';
+    setBg(document.getElementById('rbg'), 'img/'+slug+'.jpg');
+  }
+
+  function route(){
+    var h = (location.hash||'').replace(/^#\/?/,'').replace(/\/$/,'');
+    window.scrollTo(0,0);
+    if (h === '' ){ home(); document.title = 'Umbraelis · Gan Central'; return; }
+    if (h === 'mapa' || h === 'regiones'){ home(); document.title = 'Umbraelis · Gan Central';
+      setTimeout(function(){ var el = document.getElementById(h); if(el) el.scrollIntoView(); }, 30); return; }
+    if (h === 'historia'){ page(D.historia, 'historia', 'Umbraelis', null); document.title = 'Orígenes · Umbraelis · Gan Central'; return; }
+    var r = bySlug[h];
+    if (r){ page(r, r.slug, 'Umbraelis · Región', R.indexOf(r)); document.title = r.title + ' · Umbraelis · Gan Central'; return; }
+    location.hash = '#/';
+  }
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>
