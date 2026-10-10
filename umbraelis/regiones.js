@@ -67,6 +67,92 @@ window.UMBRAELIS = {
     { slug: "issardi", x: 66.5, y: 69 }
   ],
 
+  personajes: [
+    {
+      slug: "pj-damian", title: "Damián Varendor", linea: "Noble de Karthane", jugador: "Gus",
+      quote: "Primogénito de una ciudad que nunca cayó.",
+      sections: [
+        { h: "Quién es", p: [
+          "Primogénito y heredero de una casa noble de Karthane, <b>Damián</b> creció en el <b>Bastión Varendor</b>, una ciudad fortaleza de castillos unidos que jamás ha caído y que resiste a diario las hordas de no muertos. Tiene la educación de un noble y la disciplina de quien ha vivido toda su vida dentro de un asedio sin fin."
+        ]},
+        { h: "Silvia", p: [
+          "Damián rescató a una niña, <b>Silvia</b>, de una caravana de esclavos de los Hijos del Yugo, en un combate contra uno de sus capataces. En Tirak Thal le pusieron un Collar del Yugo. Hoy ya se lo han quitado, y Damián la ha tomado como pupila."
+        ]}
+      ]
+    },
+    {
+      slug: "pj-orrik", title: "Orrik de Issardi", linea: "Infernis y humano", jugador: "Pedro",
+      quote: "Una deuda que nunca podrá saldar.",
+      sections: [
+        { h: "Origen", p: [
+          "Hijo ilegítimo de un comandante infernis de Zetyar y de una mujer issardina, <b>Orrik</b> creció en un campamento militar, aprendiendo la guerra brutal de los zetarianos. Tras romper con su padre acabó esclavizado en las minas de diamantes."
+        ]},
+        { h: "Dos herencias", p: [
+          "Escapó a las ruinas de Issardi, donde sacerdotes de los Dioses Antiguos lo curaron. Desde entonces vive dividido entre la sangre infernis y la fe de su madre. Cree en la nobleza perdida de los dioses antiguos, pero no espera redención personal: su lucha es una deuda que nunca podrá saldar.",
+          "Los zetarianos lo consideran un traidor y han puesto precio a su cabeza. Los issardinos lo ven como un mestizo corrupto, aunque él sueña con que algún día lo acepten."
+        ]}
+      ]
+    },
+    {
+      slug: "pj-vashir", title: "Vashir, el Puñal del Silencio", linea: "Katari · Clan Nahir", jugador: "David",
+      quote: "Cuando actúa, nadie lo menciona, pero todos entienden el mensaje.",
+      sections: [
+        { h: "Origen", p: [
+          "En las áridas llanuras del sur vive el <b>Clan Nahir</b>. No es el más numeroso ni el más fuerte de los katari, pero sí el más temido en la intriga, la diplomacia envenenada y la eliminación silenciosa. Vashir nació en una de las líneas directas de su <b>Consejo de Sombras</b>."
+        ]},
+        { h: "Entrenamiento", p: [
+          "Desde niño fue apartado de la vida del campamento y entrenado en las Artes Silentes: venenos, infiltración, suplantación y secretos. Tuvo tres maestros: <b>Nahrik el Viejo</b>, <b>Suriya Sombra-Larga</b> y <b>Derron el Sordo</b>. Su propósito se le reveló sin mentiras: no estaba destinado a gloria ni a honor, sino a mancharse las manos por el bien de su clan."
+        ]},
+        { h: "Lealtad", p: [
+          "Solo sirve a su clan. No mata por placer ni por venganza, sino como herramienta de equilibrio entre los clanes katari, y ve la guerra como una negociación en la que la muerte es la última palabra. Siempre impecable, incluso tras un trabajo sucio, prefiere actuar bajo cobertura diplomática, en banquetes y consejos, donde su daga está más cerca del cuello enemigo que en un campo de batalla."
+        ]}
+      ]
+    },
+    {
+      slug: "pj-yvaria", title: "Yvaria Skykin", linea: "Skykin · Cyrith Aer", jugador: "Ana",
+      quote: "La Hija del Viento Caído.",
+      sections: [
+        { h: "Origen", p: [
+          "Nacida en <b>Cyrith Aer</b>, la ciudad suspendida de la Cordillera de Ilyss, <b>Yvaria</b> pertenece al linaje <b>Erythar</b>, una casa de Skykin famosa por estudiar las líneas telúricas y por sellar grietas dimensionales en la Primera Guerra contra los Arcontes. Su familia sostiene una teoría peligrosa: que los puntos donde convergen las líneas puras son las tumbas de los dioses antiguos."
+        ]},
+        { h: "La Brisa Rota", p: [
+          "Desde su nacimiento la prepararon para unirse a la Gran Expedición Erythar. A los dieciséis años rechazó ese destino y huyó a <b>Tirak Thal</b> para ingresar en la Escuela de Guerra de Kael Veyr. Su familia la declaró <i>Aeryn Var-Ka</i>, «la Brisa Rota», título de deshonra que la borró de todos los registros.",
+          "En la arena aprendió a unir la ligereza de su sangre con la brutalidad del combate. Cuando salió de la escuela, en Tirak Thal ya nadie la llamaba la Brisa Rota: la conocían como <b>la Hija del Viento Caído</b>."
+        ]},
+        { h: "Lo que busca", p: [
+          "Redención, y probar que la fuerza en batalla también puede servir para proteger y despertar a los dioses antiguos. En secreto cree que su familia tenía razón, y que algún día será ella quien despierte los cielos."
+        ]}
+      ]
+    },
+    {
+      slug: "pj-icaro", title: "Ícaro", linea: "Aetheris · Cordillera de Kartus", jugador: "Mike",
+      quote: "Instruido para proteger a Kaen y a su estirpe.",
+      sections: [
+        { h: "Origen", p: [
+          "Hijo de <b>Kyrios</b>, de una familia Aetheris que habita un elevado emplazamiento de la Cordillera de Kartus, <b>Ícaro</b> fue instruido desde joven para proteger a Kaen y a sus descendientes. Desde que Kaen cayó prisionero de los arcontes, los Aetheris buscan a su heredero, «el Elegido», que según las antiguas profecías derrocará a los arcontes. La profecía habla de un lugar llamado <b>Luminia</b>."
+        ]},
+        { h: "La emboscada", p: [
+          "Una semana antes de empezar su viaje recibieron un comunicado con la posible ubicación del Elegido. Su tribu acudió de inmediato, sin sospechar la emboscada: un poderoso arconte usó al Elegido como señuelo y, con oscuros poderes, convenció a casi toda la tribu para que se uniera a sus fuerzas. Solo Ícaro, su padre y sus hermanos resistieron su influjo.",
+          "Ícaro, su padre Kyrios y su hermana <b>Celestia</b> lograron escapar. Su hermano y alma gemela, <b>Davir</b>, fue secuestrado por los arcontes."
+        ]},
+        { h: "Su juramento", ul: [
+          "Rescatar a su hermano Davir.",
+          "Liberar al Elegido y protegerlo para que alcance su máximo poder y despierte a los dioses antiguos.",
+          "Acabar con los miembros de su tribu que se unieron a los arcontes, a quienes llama «ángeles caídos»."
+        ]}
+      ]
+    },
+    {
+      slug: "pj-ashara", title: "Ashara", linea: "Elfa · Druida", jugador: "Ana",
+      quote: "Guía de caminos que otros temen.",
+      sections: [
+        { h: "Quién es", p: [
+          "<b>Ashara</b> es una elfa druida nacida en las montañas volcánicas del este. Conoce los caminos peligrosos de esas tierras y las lee mejor que nadie. Se unió al grupo cuando abandonaron Tirak Thal."
+        ]}
+      ]
+    }
+  ],
+
   ruta: {
     legs: [
       [[26,48.6],[22,53],[20,59],[19,66],[22,73],[27.5,75.5],[31.5,72.2]],

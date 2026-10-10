@@ -94,6 +94,15 @@ nav a:hover{background:var(--bg3);text-decoration:none;color:var(--gold)}
 .btnruta:hover,.btnruta[aria-pressed=true]{background:rgba(216,180,106,.18)}
 .rleg{display:none;text-align:center;color:var(--muted);font-size:.9rem;margin-top:8px}
 .rleg.on{display:block}
+.card.pj{min-height:380px}
+.card.pj .bg{background-position:center top}
+.card.pj small{display:block;font-family:var(--title);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.rhero.pjh .bg{filter:blur(26px) brightness(.5);transform:scale(1.15)}
+.rhero.pjh .in{display:flex;gap:34px;align-items:flex-end}
+.rhero.pjh .pjimg img{height:58vh;width:auto;max-width:100%;border:1px solid var(--line);border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.rhero.pjh .pjtx{flex:1;min-width:0}
+.pjl{font-family:var(--title);letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;color:var(--gold2);margin:0 0 6px}
+@media(max-width:720px){.rhero.pjh .in{flex-direction:column;align-items:flex-start}.rhero.pjh .pjimg img{height:50vh}}
 .hint{text-align:center;color:var(--muted);font-size:.95rem;margin-top:12px}
 
 /* tarjetas */
@@ -159,6 +168,7 @@ footer a{color:var(--muted);text-decoration:underline}
     <nav>
       <a href="#/mapa">Mapa</a>
       <a href="#/regiones">Regiones</a>
+      <a href="#/personajes">Personajes</a>
       <a href="#/historia">Historia</a>
     </nav>
   </div>
@@ -174,12 +184,13 @@ footer a{color:var(--muted);text-decoration:underline}
 </footer>
 <noscript><p style="padding:40px;text-align:center">Esta página necesita JavaScript para mostrar el mapa y las regiones.</p></noscript>
 
-<script src="regiones.js?v=3"></script>
+<script src="regiones.js?v=4"></script>
 <script>
 (function(){
   var D = window.UMBRAELIS, app = document.getElementById('app');
-  var R = D.regiones, bySlug = {};
+  var R = D.regiones, P = D.personajes || [], bySlug = {};
   R.forEach(function(r){ bySlug[r.slug] = r; });
+  P.forEach(function(r){ bySlug[r.slug] = r; });
 
   function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
 
@@ -230,6 +241,10 @@ footer a{color:var(--muted);text-decoration:underline}
       return '<a class="card" href="#/'+r.slug+'"><div class="bg" data-slug="'+r.slug+'" style="background-color:#17120e;background-image:'+fallback(r.slug)+'"></div><div class="sh"></div>'+
              '<div class="tx"><h3>'+esc(r.title)+'</h3><p>'+esc(r.quote)+'</p></div></a>';
     }).join('');
+    var pcards = P.map(function(r){
+      return '<a class="card pj" href="#/'+r.slug+'"><div class="bg" data-slug="'+r.slug+'" style="background-color:#17120e;background-image:'+fallback(r.slug)+'"></div><div class="sh"></div>'+
+             '<div class="tx"><h3>'+esc(r.title)+'</h3><p>'+esc(r.quote)+'</p><small>'+esc(r.linea)+'</small></div></a>';
+    }).join('');
     app.innerHTML =
       '<section class="hero"><div class="wrap in">'+
         '<div class="eyebrow">Sombras de la Ascensión</div>'+
@@ -252,7 +267,12 @@ footer a{color:var(--muted);text-decoration:underline}
         '<h2 class="t">Regiones</h2><div class="sep"></div>'+
         '<p class="sub">Ciudades, reinos y tierras malditas, con sus facciones y peligros.</p>'+
         '<div class="grid">'+cards+'</div>'+
-      '</div></section>';
+      '</div></section>'+
+      (P.length ? '<section class="sec" id="personajes" style="border-top:1px solid var(--line)"><div class="wrap">'+
+        '<h2 class="t">Personajes</h2><div class="sep"></div>'+
+        '<p class="sub">Los protagonistas de la campaña: quiénes son y de dónde vienen.</p>'+
+        '<div class="grid">'+pcards+'</div>'+
+      '</div></section>' : '');
     var bt = document.getElementById('btnruta');
     if (bt) bt.onclick = function(){
       var on = document.querySelector('.mapbox').classList.toggle('ver-ruta');
@@ -268,16 +288,24 @@ footer a{color:var(--muted);text-decoration:underline}
 
   function page(data, slug, crumb, idx){
     var fig = data.map ? '<figure class="fig"><img src="'+data.map+'" alt="'+esc(data.mapCaption||data.title)+'" loading="lazy" onerror="this.parentNode.style.display=\'none\'"><figcaption>'+esc(data.mapCaption||'')+'</figcaption></figure>' : '';
+    var isPj = P.indexOf(data) >= 0;
     var nav = '<a href="#/regiones">‹ Todas las regiones</a>';
-    if (idx !== null){
+    if (isPj){
+      var pi = P.indexOf(data), pp = P[(pi-1+P.length)%P.length], pn = P[(pi+1)%P.length];
+      nav = '<a href="#/'+pp.slug+'">‹ '+esc(pp.title)+'</a><a href="#/personajes">Todos los personajes</a><a href="#/'+pn.slug+'">'+esc(pn.title)+' ›</a>';
+    } else if (idx !== null){
       var prev = R[(idx-1+R.length)%R.length], next = R[(idx+1)%R.length];
       nav = '<a href="#/'+prev.slug+'">‹ '+esc(prev.title)+'</a><a href="#/mapa">Volver al mapa</a><a href="#/'+next.slug+'">'+esc(next.title)+' ›</a>';
     } else {
       nav = '<a href="#/">‹ Portada</a><a href="#/mapa">Ver el mapa</a>';
     }
-    app.innerHTML =
-      '<section class="rhero"><div class="bg" id="rbg" style="background-color:#17120e;background-image:'+fallback(slug)+'"></div><div class="sh"></div>'+
-        '<div class="wrap in"><div class="crumb">'+esc(crumb)+'</div><h1>'+esc(data.title)+'</h1><p class="q">'+esc(data.quote)+'</p></div></section>'+
+    var hero = isPj
+      ? '<section class="rhero pjh"><div class="bg" id="rbg" style="background-color:#17120e"></div><div class="sh"></div>'+
+          '<div class="wrap in"><div class="pjimg"><img src="img/'+slug+'.jpg" alt="'+esc(data.title)+'" onerror="this.parentNode.style.display=\'none\'"></div>'+
+          '<div class="pjtx"><div class="crumb">'+esc(crumb)+'</div><h1>'+esc(data.title)+'</h1><p class="pjl">'+esc(data.linea)+' · Interpretado por '+esc(data.jugador)+'</p><p class="q">'+esc(data.quote)+'</p></div></div></section>'
+      : '<section class="rhero"><div class="bg" id="rbg" style="background-color:#17120e;background-image:'+fallback(slug)+'"></div><div class="sh"></div>'+
+          '<div class="wrap in"><div class="crumb">'+esc(crumb)+'</div><h1>'+esc(data.title)+'</h1><p class="q">'+esc(data.quote)+'</p></div></section>';
+    app.innerHTML = hero+
       '<article class="body">'+(data.audio ? '<div class="temabox"><span>♪ Tema de la región</span><audio controls preload="none" src="audio/'+data.audio+'.mp3"></audio></div>' : '')+renderSections(data.sections)+fig+'</article>'+
       '<div class="pn">'+nav+'</div>';
     setBg(document.getElementById('rbg'), 'img/'+slug+'.jpg');
@@ -287,11 +315,11 @@ footer a{color:var(--muted);text-decoration:underline}
     var h = (location.hash||'').replace(/^#\/?/,'').replace(/\/$/,'');
     window.scrollTo(0,0);
     if (h === '' ){ home(); document.title = 'Umbraelis · Gan Central'; return; }
-    if (h === 'mapa' || h === 'regiones'){ home(); document.title = 'Umbraelis · Gan Central';
+    if (h === 'mapa' || h === 'regiones' || h === 'personajes'){ home(); document.title = 'Umbraelis · Gan Central';
       setTimeout(function(){ var el = document.getElementById(h); if(el) el.scrollIntoView(); }, 30); return; }
     if (h === 'historia'){ page(D.historia, 'historia', 'Umbraelis', null); document.title = 'Orígenes · Umbraelis · Gan Central'; return; }
     var r = bySlug[h];
-    if (r){ page(r, r.slug, 'Umbraelis · Región', R.indexOf(r)); document.title = r.title + ' · Umbraelis · Gan Central'; return; }
+    if (r){ page(r, r.slug, P.indexOf(r) >= 0 ? 'Umbraelis · Personaje' : 'Umbraelis · Región', R.indexOf(r) >= 0 ? R.indexOf(r) : null); document.title = r.title + ' · Umbraelis · Gan Central'; return; }
     location.hash = '#/';
   }
   window.addEventListener('hashchange', route);
