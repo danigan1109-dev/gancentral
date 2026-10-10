@@ -153,6 +153,62 @@ window.UMBRAELIS = {
           "<b>Ashara</b> es una elfa druida nacida en las montañas volcánicas del este. Conoce los caminos peligrosos de esas tierras y las lee mejor que nadie. Se unió al grupo cuando abandonaron Tirak Thal."
         ]}
       ]
+    },
+    {
+      slug: "pj-astrid", title: "Astrid", linea: "Guardiana gigante", grupo: "vargarda",
+      quote: "Cada runa de su rostro es un juramento.",
+      sections: [
+        { h: "Quién es", p: [
+          "<b>Astrid</b> es una guardiana gigante del norte. Las runas azules que lleva pintadas en el rostro la marcan como guerrera, y su mirada helada no suele pedir permiso. Camina siempre junto a <b>Tarek</b>, el niño järvik que no habla.",
+          "Forma parte de los <b>Guardianes del Amanecer Perdido</b>, el grupo que recorre Vargärda."
+        ]}
+      ]
+    },
+    {
+      slug: "pj-hugo", title: "Hugo Briznanieve", linea: "Fauno · Mago", grupo: "vargarda",
+      quote: "La magia, para él, siempre empieza con una sonrisa.",
+      sections: [
+        { h: "Quién es", p: [
+          "<b>Hugo Briznanieve</b> es un fauno mago de sonrisa fácil y ojos atentos. Pequeñas chispas doradas bailan en su mano cuando conjura, y las lleva como otros llevan una daga.",
+          "Forma parte de los <b>Guardianes del Amanecer Perdido</b>, el grupo que recorre Vargärda."
+        ]}
+      ]
+    },
+    {
+      slug: "pj-leydrian", title: "Leydrian", linea: "Katari nórdica · Morrigan", grupo: "vargarda",
+      quote: "Una de las últimas de su pueblo.",
+      sections: [
+        { h: "Quién es", p: [
+          "<b>Leydrian</b> es una katari nórdica, un leopardo de las nieves, y una de las últimas de los <b>Morrigans</b>: tribus nómadas que recorren desde las Montañas del Fin del Mundo hasta la Cordillera de Kartus, ayudando a las tribus celtas con sus hechizos y su sabiduría ancestral. Hoy quedan apenas una decena de Morrigans en el mundo, y casi no pueden transmitir lo que saben.",
+          "Forma parte de los <b>Guardianes del Amanecer Perdido</b>, el grupo que recorre Vargärda."
+        ]},
+        { h: "Los hados y la rabia", p: [
+          "A Leydrian le enseñaron a aceptar los hados del destino y a recibir las cosas como vinieran. Aun así, en las noches solitarias de la montaña, oyendo a lo lejos los aullidos cada vez más escasos de su pueblo, no puede evitar que la ciegue la rabia contra quienes despreciaron las tradiciones, escupieron en la antigua Forma y mataron a los suyos."
+        ]},
+        { h: "Murray", p: [
+          "En el pecho lleva a <b>Murray</b>, su calavera parlante. Murray dice que es un enviado de los infiernos para atormentar el mundo de los vivos, pero la verdad es que es un tío de Leydrian algo tonto, que murió al caer por un acantilado y al que ella invocó con su primer hechizo. Es irritante, pero acabas cogiéndole cariño."
+        ]}
+      ]
+    },
+    {
+      slug: "pj-rufus", title: "Rufus", linea: "Enano · Explorador", grupo: "vargarda",
+      quote: "Donde él pisa, el oso ya ha olido el camino.",
+      sections: [
+        { h: "Quién es", p: [
+          "<b>Rufus</b> es un enano explorador de barba roja y mirada azul, con el rostro cubierto de runas. Rastrea el norte con su arco y no va nunca solo: lo acompaña un enorme <b>oso polar</b>.",
+          "Forma parte de los <b>Guardianes del Amanecer Perdido</b>, el grupo que recorre Vargärda."
+        ]}
+      ]
+    },
+    {
+      slug: "pj-variam", title: "Variam", linea: "Firbolg · Bardo", grupo: "vargarda",
+      quote: "Hasta los bosques más fríos saben escuchar.",
+      sections: [
+        { h: "Quién es", p: [
+          "<b>Variam</b> es un firbolg bardo de mirada serena, que parece escuchar algo que los demás aún no oyen. Camina con la calma de quien ha crecido entre árboles muy antiguos.",
+          "Forma parte de los <b>Guardianes del Amanecer Perdido</b>, el grupo que recorre Vargärda."
+        ]}
+      ]
     }
   ],
 

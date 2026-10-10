@@ -173,6 +173,9 @@ footer a{color:var(--muted);text-decoration:underline}
 .pcard h3{margin:0 0 .4em;font-family:var(--title);font-weight:500;letter-spacing:.06em;font-size:1.15rem}
 .pcard p{margin:0;color:var(--muted);font-size:.95rem}
 .pcard em{display:block;margin-top:.9em;font-style:normal;color:var(--gold);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+.gh{font-family:var(--title);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:1.05rem;color:var(--gold);margin:2.2em 0 1em;padding-bottom:.5em;border-bottom:1px solid var(--line)}
+.gh:first-of-type{margin-top:0}
+.gh small{margin-left:.8em;font-size:.72rem;color:var(--muted);letter-spacing:.12em}
 </style>
 </head>
 <body>
@@ -199,7 +202,7 @@ footer a{color:var(--muted);text-decoration:underline}
 </footer>
 <noscript><p style="padding:40px;text-align:center">Esta página necesita JavaScript para mostrar el mapa y las regiones.</p></noscript>
 
-<script src="regiones.js?v=18"></script>
+<script src="regiones.js?v=19"></script>
 <script>
 (function(){
   var D = window.UMBRAELIS, app = document.getElementById('app');
@@ -268,10 +271,11 @@ footer a{color:var(--muted);text-decoration:underline}
       return '<a class="card" href="#/'+r.slug+'"><div class="bg" data-slug="'+r.slug+'" style="background-color:#17120e;background-image:'+fallback(r.slug)+'"></div><div class="sh"></div><span class="soon">Próximamente</span>'+
              '<div class="tx"><h3>'+esc(r.title)+'</h3><p>'+esc(r.quote)+'</p></div></a>';
     }).join('');
-    var pcards = P.map(function(r){
+    var pcardF = function(r){
       return '<a class="card pj'+(r.caido?' caido':'')+'" href="#/'+r.slug+'"><div class="bg" data-slug="'+r.slug+'" style="background-color:#17120e;background-image:'+fallback(r.slug)+'"></div><div class="sh"></div>'+
              '<div class="tx"><h3>'+esc(r.title)+'</h3><p>'+esc(r.quote)+'</p><small>'+esc(r.linea)+'</small></div></a>';
-    }).join('');
+    };
+    var pcards = P.filter(function(r){return !r.grupo;}).map(pcardF).join(''), pcardsV = P.filter(function(r){return r.grupo==='vargarda';}).map(pcardF).join('');
     app.innerHTML =
       '<section class="hero"><div class="wrap in">'+
         '<div class="eyebrow">Sombras de la Ascensión</div>'+
@@ -299,7 +303,8 @@ footer a{color:var(--muted);text-decoration:underline}
       (P.length ? '<section class="sec" id="personajes" style="border-top:1px solid var(--line)"><div class="wrap">'+
         '<h2 class="t">Personajes</h2><div class="sep"></div>'+
         '<p class="sub">Los protagonistas de la campaña: quiénes son y de dónde vienen.</p>'+
-        '<div class="grid">'+pcards+'</div>'+
+        '<h3 class="gh">Sombras de la Ascensión <small>Campaña principal</small></h3><div class="grid">'+pcards+'</div>'+
+        (pcardsV ? '<h3 class="gh">Vargärda <small>Guardianes del Amanecer Perdido</small></h3><div class="grid">'+pcardsV+'</div>' : '')+
       '</div></section>' : '')+
       '<section class="sec" id="partidas" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="wrap">'+
         '<h2 class="t">Las partidas</h2><div class="sep"></div>'+
@@ -339,7 +344,7 @@ footer a{color:var(--muted);text-decoration:underline}
     var hero = isPj
       ? '<section class="rhero pjh'+(data.caido?' caido':'')+'"><div class="bg" id="rbg" style="background-color:#17120e"></div><div class="sh"></div>'+
           '<div class="wrap in"><div class="pjimg"><img src="img/'+slug+'.jpg" alt="'+esc(data.title)+'" onerror="this.parentNode.style.display=\'none\'"></div>'+
-          '<div class="pjtx"><div class="crumb">'+esc(crumb)+'</div><h1>'+esc(data.title)+'</h1><p class="pjl">'+esc(data.linea)+' · Interpretado por '+esc(data.jugador)+'</p><p class="q">'+esc(data.quote)+'</p></div></div></section>'
+          '<div class="pjtx"><div class="crumb">'+esc(crumb)+'</div><h1>'+esc(data.title)+'</h1><p class="pjl">'+esc(data.linea)+(data.jugador?' · Interpretado por '+esc(data.jugador):'')+'</p><p class="q">'+esc(data.quote)+'</p></div></div></section>'
       : '<section class="rhero"><div class="bg" id="rbg" style="background-color:#17120e;background-image:'+fallback(slug)+'"></div><div class="sh"></div>'+
           '<div class="wrap in"><div class="crumb">'+esc(crumb)+'</div><h1>'+esc(data.title)+'</h1><p class="q">'+esc(data.quote)+'</p></div></section>';
     app.innerHTML = hero+
