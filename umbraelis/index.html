@@ -103,6 +103,10 @@ nav a:hover{background:var(--bg3);text-decoration:none;color:var(--gold)}
 .rhero.pjh .pjtx{flex:1;min-width:0}
 .pjl{font-family:var(--title);letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;color:var(--gold2);margin:0 0 6px}
 @media(max-width:720px){.rhero.pjh .in{flex-direction:column;align-items:flex-start}.rhero.pjh .pjimg img{height:50vh}}
+.card .soon{display:none;position:absolute;top:12px;left:12px;z-index:2;font-family:var(--title);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);background:rgba(14,11,9,.7);padding:4px 9px;border-radius:4px}
+.card.pend .soon{display:block}
+.card.pend .bg,.rhero.pend .bg{filter:grayscale(1) brightness(.5) contrast(1.1)}
+.card.pend h3{color:#b9ad92}
 .hint{text-align:center;color:var(--muted);font-size:.95rem;margin-top:12px}
 
 /* tarjetas */
@@ -195,10 +199,22 @@ footer a{color:var(--muted);text-decoration:underline}
   function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
 
   // Pone una imagen de fondo solo si el archivo existe (si no, se queda el degradado).
-  function setBg(el, src){
+  function setBg(el, src, onerr){
     var i = new Image();
     i.onload = function(){ el.style.backgroundImage = 'url("'+src+'")'; };
+    if (onerr) i.onerror = onerr;
     i.src = src;
+  }
+  // Sin portada: recorte del mapa del mundo alrededor de la región, en gris y apagado.
+  var HOT = {};
+  D.hotspots.forEach(function(h){ HOT[h.slug] = h; });
+  function mapCss(el, slug, aspect){
+    var h = HOT[slug]; if (!h) return;
+    var ih = 4 * 1501/2000, bh = 1/aspect;
+    function cl(v){ return Math.max(0, Math.min(1, v)) * 100; }
+    el.style.backgroundImage = 'url("img/mapa-mundo.jpg")';
+    el.style.backgroundSize = '400% auto';
+    el.style.backgroundPosition = cl((h.x/100*4 - .5) / 3)+'% '+cl((h.y/100*ih - bh/2) / (ih - bh))+'%';
   }
   // Degradado de reserva distinto por región (tonos oscuros morado / rojo / ocre)
   function fallback(slug){
@@ -238,7 +254,7 @@ footer a{color:var(--muted);text-decoration:underline}
       }).join('')+'<i class="rp now" style="left:'+RU.actual.x+'%;top:'+RU.actual.y+'%" title="'+esc(RU.actual.t)+'"></i>';
     }
     var cards = R.map(function(r){
-      return '<a class="card" href="#/'+r.slug+'"><div class="bg" data-slug="'+r.slug+'" style="background-color:#17120e;background-image:'+fallback(r.slug)+'"></div><div class="sh"></div>'+
+      return '<a class="card" href="#/'+r.slug+'"><div class="bg" data-slug="'+r.slug+'" style="background-color:#17120e;background-image:'+fallback(r.slug)+'"></div><div class="sh"></div><span class="soon">Próximamente</span>'+
              '<div class="tx"><h3>'+esc(r.title)+'</h3><p>'+esc(r.quote)+'</p></div></a>';
     }).join('');
     var pcards = P.map(function(r){
@@ -282,6 +298,7 @@ footer a{color:var(--muted);text-decoration:underline}
     document.querySelectorAll('.card .bg').forEach(function(el){
       var slug = el.getAttribute('data-slug'), i = new Image();
       i.onload = function(){ el.style.backgroundImage = 'url("img/'+slug+'.jpg")'; };
+      if (!/^pj-/.test(slug)) i.onerror = function(){ el.parentNode.classList.add('pend'); mapCss(el, slug, 1.3); };
       i.src = 'img/'+slug+'.jpg';
     });
   }
@@ -308,7 +325,8 @@ footer a{color:var(--muted);text-decoration:underline}
     app.innerHTML = hero+
       '<article class="body">'+(data.audio ? '<div class="temabox"><span>♪ Tema de la región</span><audio controls preload="none" src="audio/'+data.audio+'.mp3"></audio></div>' : '')+renderSections(data.sections)+fig+'</article>'+
       '<div class="pn">'+nav+'</div>';
-    setBg(document.getElementById('rbg'), 'img/'+slug+'.jpg');
+    var rb = document.getElementById('rbg');
+    setBg(rb, 'img/'+slug+'.jpg', isPj ? null : function(){ rb.parentNode.classList.add('pend'); mapCss(rb, slug, 2.3); });
   }
 
   function route(){
