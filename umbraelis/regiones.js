@@ -358,6 +358,7 @@ window.UMBRAELIS = {
       quote: "Aquí no se muere de frío. Se muere de viejo, de hierro o de olvido.",
       map: "img/vargarda-mapa.jpg",
       mapCaption: "Mapa de Vargärda, el Norte de Umbraelis",
+      audio: "vargarda",
       sections: [
         { h: "Visión general", p: [
           "<b>Vargärda</b> es la tierra más al norte del continente: montañas de hierro, fiordos, bosques de niebla y valles donde la nieve aguanta la mitad del año. Ningún imperio la ha doblegado entera.",
@@ -384,15 +385,31 @@ window.UMBRAELIS = {
         { h: "El Señor del Norte: Dómari", p: [
           "<b>Dómari el Inmutable</b>, Arconte del Orden Eterno, gobierna Vargärda con una convicción: <i>«El caos destruyó el mundo antiguo. Solo el Orden Perfecto nos salvará.»</i> Su crueldad no es un arrebato sino un procedimiento: toda atrocidad se hace con papeles, sellos y sentencia, y no hay clemencia, solo protocolo. Su gran obra es borrar las tradiciones y religiones antiguas.",
           "Todo vargärdiano nace con el <b>Sello de la Obediencia</b>, una marca necromántica que permite rastrear a quien la porta y susurrarle al pensamiento. Solo fallan en las <i>zonas ciegas</i> que crean los huesos primordiales de Kartus. La única fe permitida es el <b>Culto de la Trascendencia Oscura</b>, cuyos templos son auditorios donde se recitan códigos legales como oraciones."
+        ], ul: [
+          { img: "pnj-domari", t: "<b>Dómari el Inmutable.</b> Arconte del Orden Eterno y Señor del Norte." }
         ]},
-        { h: "Los tres pilares del régimen", ul: [
+        { h: "La Reina Ylvara", ul: [
+          { img: "pnj-ylvara", t: "<b>Ylvara, la Reina del Hielo Eterno.</b> Segunda Arconte del Norte, cazadora primordial que domina el clima y las tormentas. Vive en el Corazón Congelado, un glaciar al noreste, y se alimenta de la sangre de titanes y criaturas primordiales. Dómari ordena Vargärda; Ylvara la cosecha." }
+        ]},
+        { h: "Los tres pilares del régimen", img: "vargarda-orden-ascension", ul: [
           "<b>La Orden de la Ascensión</b> (el brazo militar). La manda <b>Hrotgar Cadenas-Rotas</b>, un antiguo guerrero tribal que traicionó a su propio clan. Ejecutan sentencias y guardan los nodos con armaduras de hueso primordial.",
           "<b>Los Inquisidores</b> (el brazo judicial). Los dirige <b>Ylva la Ciega</b>, una völva que «vio demasiado»: sus ojos vacíos sangran tinta negra y lee la culpa tocando las almas.",
-          "<b>El Culto de la Trascendencia Oscura</b> (el control ideológico). Lo encabeza <b>Erasmus el Purificado</b>, refugiado del sur y fanático convencido de voz monótona, que destruye reliquias antiguas en ceremonias públicas."
+          { img: "pnj-erasmus", t: "<b>El Culto de la Trascendencia Oscura</b> (el control ideológico). Lo encabeza <b>Erasmus el Purificado</b>, refugiado del sur y fanático convencido de voz monótona, que destruye reliquias antiguas en ceremonias públicas." }
         ]},
-        { h: "Steinborg, la capital", p: [
+
+        { h: "Los Cosechadores", img: "vargarda-cosechadores", p: [
+          "Mercenarios a sueldo de Ylvara que cumplen un cupo mensual de cautivos y sangre primordial. Cazan con arpones, redes y cadenas, y transportan a sus presas en jaulas sobre trineos. Dómari los tolera porque sirven a su aliada."
+        ]},
+        { h: "Steinborg, la capital", img: "vargarda-steinborg", p: [
           "Ciudad interior en las estribaciones de Kartus, sin salida al mar. Fue la ciudad fortificada más próspera del norte y nunca fue conquistada: abrió sus puertas voluntariamente cuando Dómari llegó ofreciendo orden en una época de caos. Hoy es una capital administrativa de silencio opresivo: patrullas e inspectores en cada esquina, viviendas asignadas por jerarquía y colores apagados obligatorios, porque lo brillante es vanidad y se multa.",
           "En el extremo norte se alza la <b>Torre Negra</b>, cincuenta pisos de obsidiana sin ventanas y con runas que brillan de noche. Emite un zumbido constante que todos sienten. Solo la pisan los tres líderes, y nadie la mira directamente."
+        ]},
+
+        { h: "Morbingborg", img: "vargarda-morbingborg", p: [
+          "Fortaleza de los Aetheris en la Cordillera de Kartus, de piedra blanca y cristal bruñido. Sus monasterios guerreros custodian linajes antiguos y bestias primordiales, y pocos forasteros pasan de sus puertas."
+        ]},
+        { h: "Carn Dara", img: "vargarda-carn-dara", p: [
+          "Enclave sagrado fírvath de cinco grandes dólmenes y nodo de poder druídico. Cada año acoge una asamblea y un festival donde se reúnen Järvik, Fírvath, Aelvari, Grimstahl y una delegación aetheris. Hay juegos de escudo y skaldos, y lo preside la gran druida Scáthach."
         ]},
         { h: "Lugares", ul: [
           "<b>Salthavn.</b> Puerto de longhouses con tallas élficas, hoy bajo vigilancia y con barrio cerrado.",
