@@ -708,7 +708,7 @@ window.UMBRAELIS = {
       sections: [
         { h: "Visión general", p: [
           "En el <b>Reino Lejano</b>, al norte de Umbraelis, se alza la <b>Cordillera de Kartus</b>, bastión de los Aetheris: una muralla natural de cumbres nevadas y riscos afilados. Entre sus picos se ocultan fortalezas de piedra blanca y cristal bruñido, invisibles para los no iniciados. Allí residen los <b>Aetheris</b>, descendientes de guardianes celestiales que antaño sirvieron directamente a los Dioses Antiguos.",
-          "Viven según un código inmutable, regido por el deber de custodiar un legado que el mundo ha olvidado."
+          "Viven según un código inmutable, regido por el deber de custodiar el linaje de <b>Kaen</b>, el héroe de la leyenda que se alzó contra los Arcontes Nigromantes. Kaen cayó, pero se dice que su sangre sobrevive, y ellos son sus guardianes: los <b>Guardianes de Kaen</b>."
         ]},
         { h: "Historia", p: [
           "La Cordillera de Kartus fue santificada en la <b>Era del Juramento</b>, cuando los dioses confiaron a los Aetheris una misión sagrada. Durante milenios, estos guardianes han vigilado las rutas de acceso, manteniendo oculto lo que custodian. Con el paso de los siglos, las fortalezas se han convertido en monasterios guerreros donde se entrenan generaciones enteras de Aetheris. Sus rituales mezclan plegarias al alba con un estricto adiestramiento marcial y místico."
@@ -718,10 +718,14 @@ window.UMBRAELIS = {
           "Los <b>Järvik</b> los veneran como antepasados de la fuerza y se niegan a pisar sus restos con calzado de hierro. Los <b>Aetheris</b> los custodian en silencio: sus monasterios guardan <b>fragmentos sellados</b> que no deben salir de la cordillera. Y los <b>Arcontes</b> quieren los huesos sellados o hechos polvo, porque temen lo que esa resistencia antigua aún despierta en el norte.",
           "Se cuenta que el polvo de un hueso de titán da una furia que no es humana, y que quien la bebe con frecuencia deja de serlo. Por eso los huesos se vigilan, se codician y, a veces, se roban."
         ]},
-        { h: "Los Aetheris", ul: [
+        { h: "Los Aetheris", img: "kartus-aetheris", ul: [
+          "<b>Guardianes de Kaen.</b> Custodian el linaje del héroe de la leyenda y esperan el amanecer que su historia promete.",
           "<b>Descendencia celestial.</b> Se dice que en su sangre corre un vestigio del poder divino.",
           "<b>Juramento inquebrantable.</b> El deber está por encima de la vida, la libertad o el deseo personal.",
           "<b>Guardianes velados.</b> Sus fortalezas están ocultas por nieblas ilusorias y escudos de luz."
+        ]},
+        { h: "Morbingborg", img: "kartus-morbingborg", p: [
+          "Es la fortaleza de los Aetheris en lo alto de Kartus: torres de piedra blanca y cristal bruñido colgadas de la roca, tan fundidas con la montaña que cuesta decir dónde acaba el muro. Las nieblas ilusorias y los escudos de luz la ocultan a los no iniciados. Sus monasterios guerreros forman a generaciones de Guardianes de Kaen y custodian linajes antiguos y bestias primordiales. Allí gobiernan los Maestros de la Aurora, y pocos forasteros pasan de sus puertas."
         ]},
         { h: "Cultura y sociedad", ul: [
           "<b>Maestros de la Aurora.</b> Consejo de ancianos que dicta las órdenes a todos los enclaves.",
