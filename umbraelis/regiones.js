@@ -51,11 +51,12 @@ window.UMBRAELIS = {
 
   hotspots: [
     { slug: "cyrith-aer", x: 25.5, y: 43 },
+    { slug: "ciryx", x: 26.5, y: 48.3 },
     { slug: "bosques-de-aelvarn", x: 31, y: 31 },
     { slug: "tirak-thal", x: 30.5, y: 67 },
     { slug: "paramos-del-sur", x: 27, y: 70.5 },
     { slug: "bosque-cadaverico", x: 44, y: 63 },
-    { slug: "valle-de-askhaar", x: 50, y: 57 },
+    { slug: "valle-de-askhaar", x: 47, y: 57 },
     { slug: "tierras-volcanicas-de-vrakk", x: 48.5, y: 47.5 },
     { slug: "vargarda", x: 53, y: 33 },
     { slug: "cordillera-de-kartus", x: 63.5, y: 22 },
