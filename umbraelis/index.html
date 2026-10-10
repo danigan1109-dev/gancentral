@@ -107,6 +107,10 @@ nav a:hover{background:var(--bg3);text-decoration:none;color:var(--gold)}
 .card.pend .soon{display:block}
 .card.pend .bg,.rhero.pend .bg{filter:grayscale(1) brightness(.5) contrast(1.1)}
 .card.pend h3{color:#b9ad92}
+.card.caido .bg{filter:grayscale(1) brightness(.85)}
+.card.caido h3{color:#b9ad92}
+.rhero.caido .bg{filter:blur(26px) brightness(.5) grayscale(1)}
+.rhero.caido .pjimg img{filter:grayscale(1)}
 .hint{text-align:center;color:var(--muted);font-size:.95rem;margin-top:12px}
 
 /* tarjetas */
@@ -188,7 +192,7 @@ footer a{color:var(--muted);text-decoration:underline}
 </footer>
 <noscript><p style="padding:40px;text-align:center">Esta página necesita JavaScript para mostrar el mapa y las regiones.</p></noscript>
 
-<script src="regiones.js?v=5"></script>
+<script src="regiones.js?v=6"></script>
 <script>
 (function(){
   var D = window.UMBRAELIS, app = document.getElementById('app');
@@ -258,7 +262,7 @@ footer a{color:var(--muted);text-decoration:underline}
              '<div class="tx"><h3>'+esc(r.title)+'</h3><p>'+esc(r.quote)+'</p></div></a>';
     }).join('');
     var pcards = P.map(function(r){
-      return '<a class="card pj" href="#/'+r.slug+'"><div class="bg" data-slug="'+r.slug+'" style="background-color:#17120e;background-image:'+fallback(r.slug)+'"></div><div class="sh"></div>'+
+      return '<a class="card pj'+(r.caido?' caido':'')+'" href="#/'+r.slug+'"><div class="bg" data-slug="'+r.slug+'" style="background-color:#17120e;background-image:'+fallback(r.slug)+'"></div><div class="sh"></div>'+
              '<div class="tx"><h3>'+esc(r.title)+'</h3><p>'+esc(r.quote)+'</p><small>'+esc(r.linea)+'</small></div></a>';
     }).join('');
     app.innerHTML =
@@ -317,7 +321,7 @@ footer a{color:var(--muted);text-decoration:underline}
       nav = '<a href="#/">‹ Portada</a><a href="#/mapa">Ver el mapa</a>';
     }
     var hero = isPj
-      ? '<section class="rhero pjh"><div class="bg" id="rbg" style="background-color:#17120e"></div><div class="sh"></div>'+
+      ? '<section class="rhero pjh'+(data.caido?' caido':'')+'"><div class="bg" id="rbg" style="background-color:#17120e"></div><div class="sh"></div>'+
           '<div class="wrap in"><div class="pjimg"><img src="img/'+slug+'.jpg" alt="'+esc(data.title)+'" onerror="this.parentNode.style.display=\'none\'"></div>'+
           '<div class="pjtx"><div class="crumb">'+esc(crumb)+'</div><h1>'+esc(data.title)+'</h1><p class="pjl">'+esc(data.linea)+' · Interpretado por '+esc(data.jugador)+'</p><p class="q">'+esc(data.quote)+'</p></div></div></section>'
       : '<section class="rhero"><div class="bg" id="rbg" style="background-color:#17120e;background-image:'+fallback(slug)+'"></div><div class="sh"></div>'+
