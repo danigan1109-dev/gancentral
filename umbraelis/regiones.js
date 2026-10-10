@@ -363,21 +363,36 @@ window.UMBRAELIS = {
           "<b>Vargärda</b> es la tierra más al norte del continente: montañas de hierro, fiordos, bosques de niebla y valles donde la nieve aguanta la mitad del año. Ningún imperio la ha doblegado entera.",
           "Está repartida entre seis reinos que apenas se fían entre sí (<b>Valdrenn, Askelheim, Mörkald, Vårskald, Grimstahl y Kaldorn</b>) y varios pueblos que no responden a ningún trono."
         ]},
-        { h: "Los Järvik, hijos del hierro", p: [
+        { h: "Los Järvik, hijos del hierro", img: "vargarda-jarvik", p: [
           "Nórdicos de la Cordillera de Kartus y de la costa. No tienen rey: se organizan en clanes con un <b>jarl</b> elegido por sus hazañas, una <b>völva</b> que habla con los ancestros y una asamblea, el <b>Thing</b>, donde se decide la guerra y la paz.",
           "Para ellos la palabra es ley. El peor insulto es <i>argr</i> (cobarde), y negar hospitalidad a un viajero no se perdona."
         ], ul: [
-          "<b>Eisenvöldr, el Pueblo del Hierro.</b> Forjadores que sueñan con reavivar las antiguas Forjas del Trueno.",
+          "<b>Eisenvöldr, el Pueblo del Hierro.</b> Forjadores que sueñan con reavivar las antiguas Forjas del Trueno. Los lidera el jarl <b>Ulfrik Martillo de Tormenta</b>, un gigante de barba roja trenzada con anillos de hierro que ríe a todas horas.",
           "<b>Bjarnheimr, el Hogar del Oso.</b> Cazadores y domadores de bestias, con sus berserkir.",
           "<b>Sköll.</b> Los clanes de la costa norte: marineros de drakkar que viven mirando al mar de las Cenizas."
         ]},
-        { h: "Los Fírvath, guardianes de túmulos", p: [
+        { h: "Los Fírvath, guardianes de túmulos", img: "vargarda-firvath", p: [
           "Celtas y druidas que huyeron al norte cuando cayó su reino. No hay un alto rey: son muchos <i>tuatha</i> pequeños que se reúnen en <b>Samhain</b>, la noche de los muertos. No usan escritura, y la memoria del pueblo la guardan los bardos.",
-          "Entierran a sus muertos sin quemarlos, porque creen que el cuerpo debe seguir entero para la otra vida. Sus druidas piden permiso a los espíritus en vez de someterlos, y esa es la gran diferencia entre ellos y los nigromantes."
+          "Entierran a sus muertos sin quemarlos, porque creen que el cuerpo debe seguir entero para la otra vida. Sus druidas piden permiso a los espíritus en vez de someterlos, y esa es la gran diferencia entre ellos y los nigromantes.",
+          "Su autoridad suprema en el festival de Carn Dara es la gran druida <b>Scáthach</b>, de 128 años y sangre élfica, que habla poco pero cuyas palabras pesan."
         ]},
-        { h: "Los Aelvari del Norte, elfos de hielo", p: [
+        { h: "Los Aelvari del Norte, elfos de hielo", img: "vargarda-aelvari", p: [
           "Una colonia élfica que quedó aislada del mar hace siglos y acabó haciéndose vikinga: barbas, trenzas, tatuajes rúnicos azules, hachas y arcos compuestos. Siguen siendo elfos y viven cientos de años, pero la mayoría ya no recuerda el nombre de la tierra de la que partieron.",
-          "Su proverbio dice: <i>«Bailamos con lobos porque los cisnes nos abandonaron.»</i> <b>Salthavn</b>, su ciudad, está ocupada, y los libres se esconden en los Bosques de Niebla."
+          "Su proverbio dice: <i>«Bailamos con lobos porque los cisnes nos abandonaron.»</i> <b>Salthavn</b>, su ciudad, está ocupada, y los libres se esconden en los Bosques de Niebla.",
+          "Los de la niebla los lidera <b>Astrid Runa-Sangre</b>, völva y guerrera de 156 años con tatuajes rúnicos que brillan al combatir."
+        ]},
+        { h: "El Señor del Norte: Dómari", p: [
+          "<b>Dómari el Inmutable</b>, Arconte del Orden Eterno, gobierna Vargärda con una convicción: <i>«El caos destruyó el mundo antiguo. Solo el Orden Perfecto nos salvará.»</i> Su crueldad no es un arrebato sino un procedimiento: toda atrocidad se hace con papeles, sellos y sentencia, y no hay clemencia, solo protocolo. Su gran obra es borrar las tradiciones y religiones antiguas.",
+          "Todo vargärdiano nace con el <b>Sello de la Obediencia</b>, una marca necromántica que permite rastrear a quien la porta y susurrarle al pensamiento. Solo fallan en las <i>zonas ciegas</i> que crean los huesos primordiales de Kartus. La única fe permitida es el <b>Culto de la Trascendencia Oscura</b>, cuyos templos son auditorios donde se recitan códigos legales como oraciones."
+        ]},
+        { h: "Los tres pilares del régimen", ul: [
+          "<b>La Orden de la Ascensión</b> (el brazo militar). La manda <b>Hrotgar Cadenas-Rotas</b>, un antiguo guerrero tribal que traicionó a su propio clan. Ejecutan sentencias y guardan los nodos con armaduras de hueso primordial.",
+          "<b>Los Inquisidores</b> (el brazo judicial). Los dirige <b>Ylva la Ciega</b>, una völva que «vio demasiado»: sus ojos vacíos sangran tinta negra y lee la culpa tocando las almas.",
+          "<b>El Culto de la Trascendencia Oscura</b> (el control ideológico). Lo encabeza <b>Erasmus el Purificado</b>, refugiado del sur y fanático convencido de voz monótona, que destruye reliquias antiguas en ceremonias públicas."
+        ]},
+        { h: "Steinborg, la capital", p: [
+          "Ciudad interior en las estribaciones de Kartus, sin salida al mar. Fue la ciudad fortificada más próspera del norte y nunca fue conquistada: abrió sus puertas voluntariamente cuando Dómari llegó ofreciendo orden en una época de caos. Hoy es una capital administrativa de silencio opresivo: patrullas e inspectores en cada esquina, viviendas asignadas por jerarquía y colores apagados obligatorios, porque lo brillante es vanidad y se multa.",
+          "En el extremo norte se alza la <b>Torre Negra</b>, cincuenta pisos de obsidiana sin ventanas y con runas que brillan de noche. Emite un zumbido constante que todos sienten. Solo la pisan los tres líderes, y nadie la mira directamente."
         ]},
         { h: "Lugares", ul: [
           "<b>Salthavn.</b> Puerto de longhouses con tallas élficas, hoy bajo vigilancia y con barrio cerrado.",
