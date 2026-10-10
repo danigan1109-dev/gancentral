@@ -120,7 +120,10 @@ window.UMBRAELIS = {
           "En la arena aprendió a unir la ligereza de su sangre con la brutalidad del combate. Cuando salió de la escuela, en Tirak Thal ya nadie la llamaba la Brisa Rota: la conocían como <b>la Hija del Viento Caído</b>."
         ]},
         { h: "Lo que busca", p: [
-          "Redención, y probar que la fuerza en batalla también puede servir para proteger y despertar a los dioses antiguos. En secreto cree que su familia tenía razón, y que algún día será ella quien despierte los cielos."
+          "Redención, y probar que la fuerza en batalla también puede servir para proteger y despertar a los dioses antiguos. En secreto creía que su familia tenía razón, y que algún día sería ella quien despertara los cielos."
+        ]},
+        { h: "En memoria", p: [
+          "Yvaria se sacrificó. Aceptó al dios <b>Zhar</b> en su interior y decidió morir ardiendo con él, debilitando el poder de los Arcontes y liberando al mundo de un posible dios de la guerra sin fin."
         ]}
       ]
     },
