@@ -497,31 +497,57 @@ window.UMBRAELIS = {
       quote: "Donde las olas llevan huesos… y las velas, mentiras.",
       sections: [
         { h: "Visión general", p: [
-          "El <b>Mar de las Cenizas</b> es un vasto y opresivo océano gris donde el agua parece mezclada con polvo y hollín. Las olas rompen con un sonido hueco, como si algo las ahogara desde abajo. La visibilidad rara vez supera el horizonte cercano: una bruma perpetua cubre el mar, difuminando los límites entre cielo y agua.",
-          "Navegar por él es arriesgarse a perderse para siempre, no solo por las corrientes impredecibles, sino por las <b>flotas piratas</b> que lo patrullan. Estos corsarios, los <b>Hijos de la Ceniza</b>, son más que saqueadores: se dice que sellan pactos con espíritus marinos y beben sangre mezclada con agua del propio mar para asegurar que sus almas siempre encuentren el camino de regreso… aunque sea al fondo."
+          "El <b>Mar de las Cenizas</b> es un mar interior de aguas grises que separa los Páramos del Sur de Zetyar e Issardi. Una bruma perpetua cubre el horizonte y las olas rompen con un sonido hueco, como si algo las ahogara desde abajo.",
+          "Nadie lo cruza sin pagar algo: a los piratas, a la Armada, o al propio mar."
         ]},
         { h: "Historia", p: [
-          "Antes de la Primera Ascensión, el Mar de las Cenizas era una ruta comercial vital que conectaba varias ciudades-estado costeras. Durante la guerra, los Arcontes lo maldijeron al hundir en sus profundidades una flota enemiga junto con un artefacto prohibido. La maldición convirtió sus aguas en una tumba líquida que nunca se calma.",
-          "Los marinos aseguran que, en noches sin luna, es posible ver a los barcos hundidos navegando de nuevo, tripulados por esqueletos envueltos en algas, en busca de venganza contra cualquier embarcación viva."
+          "Antes de la Primera Ascensión era una ruta comercial vital entre ciudades-estado costeras. Durante la guerra, los Arcontes hundieron aquí una flota enemiga junto con un artefacto prohibido, y la maldición convirtió sus aguas en una tumba líquida que nunca se calma.",
+          "En noches sin luna se ve a los barcos hundidos navegar de nuevo, tripulados por esqueletos envueltos en algas, en busca de venganza contra cualquier embarcación viva."
         ]},
-        { h: "Cultura y sociedad", ul: [
-          "<b>Pueblos flotantes</b> formados por embarcaciones unidas, donde se intercambian bienes y favores.",
-          "<b>Tripulaciones piratas</b> que saquean, comercian con esclavos y trafican reliquias del fondo.",
-          "<b>Ermitas de vigías</b> en islotes, donde solitarios envían señales de humo o fuego para advertir de ataques."
+        { h: "El mar y sus corrientes", img: "fauces-grises", ul: [
+          "<b>La Corriente Muda.</b> Una corriente sin oleaje ni ruido, la ruta de los contrabandistas: cualquier vigía oye una tormenta, pero nadie oye el silencio.",
+          "<b>Las Fauces Grises.</b> Remolinos alrededor de las ruinas de Thalyssar, provocados por las torres hundidas. Solo pasan los pilotos que conocen la ruina de memoria.",
+          "<b>La Resaca de Ubídume.</b> En ciertas noches, sin viento, el agua tira hacia una fosa sin nombre en el centro del mar. Los barcos arrastrados no reaparecen, y a veces sí su tripulación, muerta y con los ojos abiertos, semanas después y muy lejos.",
+          "<b>La Sed de Profundidad.</b> Un impulso de arrojarse al agua y dejarse hundir, que se agrava junto a las Fauces y la Resaca."
         ]},
-        { h: "Facciones y personajes clave", ul: [
-          "<b>Los Hijos de la Ceniza.</b> Confederación de capitanes piratas que obedecen un código sangriento.",
-          "<b>Capitana Syrrha Diente de Coral.</b> Maestra en emboscadas y portadora de un timón encantado que puede cambiar el rumbo del viento."
+        { h: "La Armada de Kharzul", img: "armada-kharzul", p: [
+          "Corsarios infernis al servicio de Zetyar, financiados por los Arcontes. No se consideran piratas: «cobramos lo que se nos debe». Escoltan los convoyes de oro, esclavos y Gemas de Sangre, cazan a los capitanes de la Cofradía y vigilan el mar. Cada nave la manda un caudillo infernis cuya lealtad se compra con botín, no con ideales."
+        ], ul: [
+          { img: "pnj-roskar", t: "<b>Almirante Roskar Fauces de Hierro.</b> Caudillo infernis al mando de la flota. Cruel con el enemigo, frío con los suyos, y cumple su palabra al pie de la letra." }
         ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>El Guardián del Faro Hundido.</b> Un espectro que guía a las naves a su perdición.",
-          "<b>Tormentas de Ceniza.</b> Reducen la visibilidad a pocos metros y abrasan la piel.",
-          "<b>Aguas Engullidoras.</b> Remolinos que arrastran barcos a grutas subacuáticas.",
-          "<b>Barcos Fantasma.</b> Aparecen repentinamente y desaparecen igual de rápido."
+        { h: "La Cofradía de las Cenizas", p: [
+          "Confederación inestable de cuadrillas piratas que comparten rutas y enemigos pero compiten por el mismo botín. Todos juran el <b>Código Sangriento</b>: no se traiciona en la Cala, el mar cobra su parte antes de zarpar, y un eco (una deuda de honor) no se rompe dos veces."
+        ], ul: [
+          "<b>Larissa, el Eco Roto</b> (Cala del Vigía Caído) y <b>Jorren Vael</b> (El Alba Marchita): los encuentras en Páramos del Sur.",
+          "<b>Kaeron, el Yunque del Rosario.</b> Antiguo sargento fronterizo de Karthane que desertó hace veinte años y nunca ha dicho por qué. Manda la cuadrilla más numerosa con disciplina de cuartel, y gobierna <i>La Penitencia</i>, un galeón capturado a la Armada.",
+          { img: "pnj-kessa", t: "<b>Kessa «Diente de Anzuelo».</b> Antigua esclava de las minas de Kharzul. Capitanea Los Descosidos, fugitivos sin barco fijo que roban naves para financiar la fuga de otros." }
+        ]},
+        { h: "Los Vigías de la Bruma", p: [
+          "Solitarios y penitentes en islotes y ruinas que encienden fuegos de aviso. No luchan ni comercian con cualquiera, y venden información a quien se la merece. La más antigua es <b>Maren Sinluz</b>, ciega desde hace veinte años, que «ve» el mar en el humo de sus fuegos."
+        ]},
+        { h: "Las Ruinas de Thalyssar", img: "thalyssar-aerea", p: [
+          "Un archipiélago entero de torres ciclópeas medio sumergidas, de la que la Cala del Vigía Caído es solo la entrada más accesible. Con la marea baja se ven calles bajo el agua y cámaras secas que aún guardan reliquias del imperio caído. Aquí se alzan los <b>Faros Ciegos</b>: tres torres cuyos antiguos vigías nunca dejaron su puesto, ni siquiera después de morir. Puedes leer más sobre ellas en Páramos del Sur."
+        ]},
+        { h: "El Rosario Roto", img: "rosario-roto", p: [
+          "Una península fortificada con un castillo reconvertido en fortaleza pirata, la capital no oficial de la Cofradía. La protegen los <b>Bajíos del Rosario</b>, un laberinto de rocas apenas bajo el agua con solo dos o tres canales seguros, y solo con marea baja: ninguna nave pesada llega sin encallar."
+        ]},
+        { h: "Isla de las Manos Quemadas", img: "manos-quemadas", p: [
+          "El único puerto neutral del mar, en una caldera volcánica extinta. Sus paredes de roca negra están cubiertas de manos quemadas por los piratas que sellaron tratos a fuego. Aquí no hay banderas, solo precios, y quien rompe la neutralidad es cazado por todas las cuadrillas a la vez."
+        ]},
+        { h: "La Deriva", img: "la-deriva", p: [
+          "Un pueblo flotante de decenas de barcos unidos con cadenas y pasarelas podridas. Allí viven refugiados de Thalyssar, desertores de Kharzul y fugitivos de las minas, sin lealtad a nadie y comerciando con todos cuando conviene sobrevivir."
+        ]},
+        { h: "Kharzul", img: "kharzul", p: [
+          "Fuerte naval tallado en un acantilado de basalto en la costa de Zetyar, con grúas de hierro, astilleros y una guarnición infernis. Menos ciudad que campamento militar: ningún extraño es bienvenido."
+        ]},
+        { h: "Otros lugares y peligros", ul: [
+          "<b>Los Bajíos del Lamento.</b> Arrecifes y cementerio de naufragios donde anidan las Sirenas del Lamento, que cantan con voces de seres queridos perdidos.",
+          "<b>Tierras Muertas.</b> Una isla volcánica cubierta de ceniza gris donde no crece ni anida nada. Nadie vive en el interior, y quien se queda demasiado no siente miedo, sino indiferencia.",
+          "<b>Pólvora de Sangre.</b> Los cañones disparan Gemas de Sangre molidas y hueso calcinado: un fogonazo rojo oscuro, olor a metal quemado, y detonaciones traicioneras.",
+          "<b>Tormentas de Ceniza, barcos fantasma</b> y el espectro del <b>Faro Hundido</b>, que guía a las naves a su perdición."
         ]}
       ]
     },
-
     {
       slug: "cadena-montanosa-de-las-sombras",
       title: "Cadena Montañosa de las Sombras",
