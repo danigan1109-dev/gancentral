@@ -176,6 +176,13 @@ footer a{color:var(--muted);text-decoration:underline}
 .gh{font-family:var(--title);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:1.05rem;color:var(--gold);margin:2.2em 0 1em;padding-bottom:.5em;border-bottom:1px solid var(--line)}
 .gh:first-of-type{margin-top:0}
 .gh small{margin-left:.8em;font-size:.72rem;color:var(--muted);letter-spacing:.12em}
+nav a.ytl{color:var(--gold)}
+svg{flex:none}
+.ytl svg,.ftyt svg{width:18px;height:18px;fill:#e0382e;vertical-align:-3px;margin-right:7px}
+.pth{display:block;aspect-ratio:16/9;background:#17120e center/cover;border-radius:6px;margin:-4px 0 16px;border:1px solid var(--line)}
+.ftyt{display:flex;gap:10px 26px;justify-content:center;flex-wrap:wrap;margin:0 0 14px}
+.ftyt a{text-decoration:none;color:var(--text)}
+.ftyt a:hover{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -188,6 +195,7 @@ footer a{color:var(--muted);text-decoration:underline}
       <a href="#/regiones">Regiones</a>
       <a href="#/personajes">Personajes</a>
       <a href="#/historia">Historia</a>
+      <a href="#/partidas" class="ytl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>Partidas</a>
     </nav>
   </div>
 </header>
@@ -197,6 +205,7 @@ footer a{color:var(--muted);text-decoration:underline}
 <footer>
   <div class="wrap">
     Umbraelis · <i>Sombras de la Ascensión</i> · Una campaña de <a href="/">Gan Central</a><br>
+    <div class="ftyt"><a href="https://www.youtube.com/@daniganrol" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>Canal de Gan Central</a><a href="https://www.youtube.com/playlist?list=PLMZtjnRkggijyjWyVzX5sEy9EcoshN2GQ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>Sombras de la Ascensión</a><a href="https://www.youtube.com/playlist?list=PLMZtjnRkggihI_zOzmqEVwiJOKW92OzWX" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>Vargärda</a></div>
     <small>© Gan Central. Mundo, textos y mapas originales.</small>
   </div>
 </footer>
@@ -310,8 +319,8 @@ footer a{color:var(--muted);text-decoration:underline}
         '<h2 class="t">Las partidas</h2><div class="sep"></div>'+
         '<p class="sub">Mira la campaña jugada, episodio a episodio, en el canal de Gan Central.</p>'+
         '<div class="pgrid">'+
-          '<a class="pcard" href="https://www.youtube.com/playlist?list=PLMZtjnRkggijyjWyVzX5sEy9EcoshN2GQ" target="_blank" rel="noopener"><small>Daggerheart</small><h3>Sombras de la Ascensión</h3><p>Libro I de la campaña principal.</p><em>Ver en YouTube →</em></a>'+
-          '<a class="pcard" href="https://www.youtube.com/playlist?list=PLMZtjnRkggihI_zOzmqEVwiJOKW92OzWX" target="_blank" rel="noopener"><small>Daggerheart</small><h3>Vargärda</h3><p>La campaña del norte, entre los Järvik y los Fírvath.</p><em>Ver en YouTube →</em></a>'+
+          '<a class="pcard" href="https://www.youtube.com/playlist?list=PLMZtjnRkggijyjWyVzX5sEy9EcoshN2GQ" target="_blank" rel="noopener"><span class="pth" style="background-image:url(https://i.ytimg.com/vi/8zZTTAtbkZI/hqdefault.jpg)"></span><small>Daggerheart</small><h3>Sombras de la Ascensión</h3><p>Libro I de la campaña principal.</p><em>Ver en YouTube →</em></a>'+
+          '<a class="pcard" href="https://www.youtube.com/playlist?list=PLMZtjnRkggihI_zOzmqEVwiJOKW92OzWX" target="_blank" rel="noopener"><span class="pth" style="background-image:url(https://i.ytimg.com/vi/r50x1i7Cr2A/hqdefault.jpg)"></span><small>Daggerheart</small><h3>Vargärda</h3><p>La campaña del norte, entre los Järvik y los Fírvath.</p><em>Ver en YouTube →</em></a>'+
         '</div>'+
       '</div></section>';
     var bt = document.getElementById('btnruta');
@@ -358,7 +367,7 @@ footer a{color:var(--muted);text-decoration:underline}
     var h = (location.hash||'').replace(/^#\/?/,'').replace(/\/$/,'');
     window.scrollTo(0,0);
     if (h === '' ){ home(); document.title = 'Umbraelis · Gan Central'; return; }
-    if (h === 'mapa' || h === 'regiones' || h === 'personajes'){ home(); document.title = 'Umbraelis · Gan Central';
+    if (h === 'mapa' || h === 'regiones' || h === 'personajes' || h === 'partidas'){ home(); document.title = 'Umbraelis · Gan Central';
       setTimeout(function(){ var el = document.getElementById(h); if(el) el.scrollIntoView(); }, 30); return; }
     if (h === 'historia'){ page(D.historia, 'historia', 'Umbraelis', null); document.title = 'Orígenes · Umbraelis · Gan Central'; return; }
     var r = bySlug[h];
