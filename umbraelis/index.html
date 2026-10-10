@@ -166,6 +166,13 @@ footer a{color:var(--muted);text-decoration:underline}
   .hot span{display:none}
 }
 @media(prefers-reduced-motion:reduce){.hot::before{animation:none}html{scroll-behavior:auto}.card .bg{transition:none}}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:820px;margin:0 auto}
+.pcard{display:block;padding:22px 24px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);color:var(--text)}
+.pcard:hover{border-color:var(--gold);text-decoration:none}
+.pcard small{display:block;font-family:var(--title);letter-spacing:.14em;text-transform:uppercase;font-size:.74rem;color:var(--gold);margin-bottom:.5em}
+.pcard h3{margin:0 0 .4em;font-family:var(--title);font-weight:500;letter-spacing:.06em;font-size:1.15rem}
+.pcard p{margin:0;color:var(--muted);font-size:.95rem}
+.pcard em{display:block;margin-top:.9em;font-style:normal;color:var(--gold);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -293,7 +300,15 @@ footer a{color:var(--muted);text-decoration:underline}
         '<h2 class="t">Personajes</h2><div class="sep"></div>'+
         '<p class="sub">Los protagonistas de la campaña: quiénes son y de dónde vienen.</p>'+
         '<div class="grid">'+pcards+'</div>'+
-      '</div></section>' : '');
+      '</div></section>' : '')+
+      '<section class="sec" id="partidas" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="wrap">'+
+        '<h2 class="t">Las partidas</h2><div class="sep"></div>'+
+        '<p class="sub">Mira la campaña jugada, episodio a episodio, en el canal de Gan Central.</p>'+
+        '<div class="pgrid">'+
+          '<a class="pcard" href="https://www.youtube.com/playlist?list=PLMZtjnRkggijyjWyVzX5sEy9EcoshN2GQ" target="_blank" rel="noopener"><small>Daggerheart</small><h3>Sombras de la Ascensión</h3><p>Libro I de la campaña principal.</p><em>Ver en YouTube →</em></a>'+
+          '<a class="pcard" href="https://www.youtube.com/playlist?list=PLMZtjnRkggihI_zOzmqEVwiJOKW92OzWX" target="_blank" rel="noopener"><small>Daggerheart</small><h3>Vargärda</h3><p>La campaña del norte, entre los Järvik y los Fírvath.</p><em>Ver en YouTube →</em></a>'+
+        '</div>'+
+      '</div></section>';
     var bt = document.getElementById('btnruta');
     if (bt) bt.onclick = function(){
       var on = document.querySelector('.mapbox').classList.toggle('ver-ruta');
