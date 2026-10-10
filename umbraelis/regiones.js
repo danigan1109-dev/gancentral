@@ -463,26 +463,40 @@ window.UMBRAELIS = {
       sections: [
         { h: "Visión general", p: [
           "El <b>Valle de Askhaar</b>, el Corredor del Yugo, es la gran llanura de tierra rojiza y colinas bajas que se extiende entre las tierras volcánicas de <b>Vrakk</b>, al norte, y el <b>Bosque Cadavérico</b>, al sur. Al oeste, el camino conduce hacia Tirak Thal; al este, hacia <b>Ubídume</b>, y en ese borde oriental se alza la fortaleza de <b>Mal-Karrith</b>, «la Cancela de Hierro».",
+          "Quien llega del oeste, por el Paso del Oeste, ve el desfiladero abrirse de golpe en un valle ancho de tierra rojiza y colinas bajas, donde el aire cambia y por primera vez en días se ve el horizonte entero. De ahí a Vareth hay cuatro o cinco días de marcha.",
           "Fue siempre tierra de jinetes y rebaños, de horizontes abiertos y cultura ecuestre de raíz sármata. Hoy es otra cosa: un corredor militar disputado, recorrido por patrullas y caravanas armadas, donde cada ciudad en pie parece una excepción."
+        ]},
+        { h: "El Espinazo de Zhar", p: [
+          "Cadena rocosa baja, de picos partidos y valles estrechos, veteada de piedra oscura que parece óxido o sangre seca. Los Páramos del Sur llevan generaciones señalándola de lejos sin acercarse. El pueblo llano cree que es lo que quedó de la columna del dios caído, hundida y fosilizada kilómetros al oeste de la Cicatriz de Zhar.",
+          "No tiene agua fácil y ni el Yugo ni las patrullas de la ciudad se molestan en peinarla. Entre sus grietas malviven esclavos huidos y gladiadores desertores, y solo ellos conocen el único cruce seguro hacia las Llanuras de Askhaar."
         ]},
         { h: "Historia", p: [
           "Durante generaciones, el valle fue el hogar de los <b>vrakhari</b>, un pueblo de ciudades hermanas, jinetes acorazados y pastores trashumantes. Sus ciudades se alineaban a lo largo del corredor, al sur junto al linde del Bosque Cadavérico y al norte a los pies de las montañas.",
           "El <b>Yugo</b> lo cambió todo. Ciudad tras ciudad fue tomada y arrasada, hasta que el valle se convirtió en un cementerio de ciudades."
         ], ul: [
           "<b>Vorlanthe, la Ciudad Vencida.</b> Gran ruina a los pies de Mal-Karrith, que aún conserva la memoria de la resistencia.",
-          "<b>Las Ciudades Ceniza.</b> Karlanthe, Duvorra, Eskvarr y Tholanthe, tomadas y destruidas sobre el borde del Bosque Cadavérico."
+          "<b>Las Ciudades Ceniza.</b> Karlanthe, Duvorra, Eskvarr y Tholanthe eran ciudades hermanas del valle, sobre el borde del Bosque Cadavérico. Fueron tomadas y arrasadas por el Yugo, y hoy son un cementerio donde nadie acampa. Para la gente de Vareth, cada una es una herida con nombre."
         ]},
         { h: "Cultura y sociedad", p: [
           "Los vrakhari que sobreviven viven entre las ruinas de lo que fueron: jinetes sin ciudad, refugiados de todas las comarcas, pastores que siguen moviendo sus rebaños por tierras que ya no son suyas. Hablan distintos dialectos, pero comparten la misma mirada de quien ya ha perdido su casa una vez.",
-          "El valle sigue siendo tierra de caballos y de lanzas. Quien lo cruza aprende pronto que aquí la confianza se gana despacio y se pierde deprisa."
+          "El valle sigue siendo tierra de caballos y de lanzas. Quien lo cruza aprende pronto que aquí la confianza se gana despacio y se pierde deprisa.",
+          "Los rebaños de <b>greyhorn</b>, cabras de pelaje ceniciento y muy resistentes a la tierra pobre, son la riqueza de quien aún conserva ganado. Los pastores los llevan de un pasto a otro por las colinas bajas, y el Yugo se queda con parte de ellos en cada puesto."
+        ]},
+        { h: "Vareth, la ciudad refugio", p: [
+          "Vareth no es la capital esplendorosa de las historias. Es una ciudad murada, superpoblada y sostenida con lo justo: tiendas de campaña llenan cada calle que en su día tuvo nombre, y hay demasiada gente para tan poca ciudad.",
+          "Viven aquí refugiados de las ciudades arrasadas por los Hijos del Yugo, gente libre sin juramento a ninguna de las tres casas de Vrakk, que no tenía adónde ir. Los Jinetes Rotos, con el blasón gastado de una casa que ya no debería significar nada, guardan sus puertas y salen a vigilar los caminos de acceso."
         ]},
         { h: "Lugares y facciones clave", ul: [
           "<b>Vareth.</b> La única ciudad vrakhari que aún resiste en el corredor. Amurallada, abarrotada de refugiados y sostenida a pulso, es la última llama del valle.",
           "<b>Los Jinetes Rotos.</b> Pequeña fuerza de jinetes vrakhari libres, sin juramento a ninguna de las casas de Vrakk. Sostienen las puertas de Vareth.",
-          "<b>Mal-Karrith, la Cancela de Hierro.</b> Fortaleza levantada en basalto negro y hierro, que cierra el paso hacia Ubídume.",
-          "<b>El Campamento del Yugo.</b> Gran campamento fortificado sobre la ruta principal del valle, base de las fuerzas que lo vigilan.",
+          "<b>Mal-Karrith, la Cancela de Hierro.</b> Fortaleza-ancla oriental, levantada en basalto zarythiano y hierro negro. Cierra el paso hacia Ubídume y es el tapón militar de todo el corredor. A sus pies yace Vorlanthe, la Ciudad Vencida. Sus defensas escupen un fuego carmesí, el color del Yugo, que los vrakhari reconocen como la marca de quien los sometió.",
+          "<b>El Gran Campamento del Yugo.</b> Campamento fortificado sobre la ruta principal del valle, base de las fuerzas que lo vigilan. De aquí salen las patrullas y los puestos que cobran con sangre.",
           "<b>La Ruta de las Caravanas Rojas.</b> Camino empedrado que cruza el valle de norte a sur, la vía más transitada y la más vigilada.",
-          "<b>Las casas de Vrakk.</b> Melqar, Korruval y Dravok, señores de las montañas del norte, que observan el valle desde sus fortalezas."
+          "<b>Las casas de Vrakk.</b> Al norte, en las tierras volcánicas, tres casas se disputan el trono vacío: <b>Melqar</b>, que gobierna desde la capital, <b>Kar-Vrakk</b>; <b>Korruval</b>, la que más empuja la guerra contra el Yugo; y <b>Dravok</b>, que juega su propio juego. Ninguna tiene un rey verdadero, y sus fortalezas vigilan el valle desde las montañas."
+        ]},
+        { h: "Los muertos del valle", p: [
+          "En el valle se cuenta que los muertos ya no se quedan quietos. Las familias que entierran a los suyos dicen que, días después, algunos cuerpos se levantan y echan a andar hacia el sur, hacia el Bosque Cadavérico. Nadie sabe por qué.",
+          "Hay un dicho viejo entre la gente de montaña: <i>«quema a los caídos antes de que anochezca dos veces»</i>. Quien lo recuerda no sabe explicarlo, pero lo cumple."
         ]},
         { h: "Peculiaridades y peligros", ul: [
           "<b>Ciudades muertas.</b> Ruinas silenciosas a lo largo del corredor, donde conviene no acampar.",
