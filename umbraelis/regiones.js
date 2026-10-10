@@ -718,24 +718,22 @@ window.UMBRAELIS = {
       title: "Issardi",
       quote: "Allí donde las campanas ya no suenan, los rezos aún arden en silencio.",
       sections: [
-        { h: "Visión general", p: [
-          "<b>Issardi</b>, Eco de la Devoción Perdida, fue antaño un reino montañoso y fértil, devoto de los Dioses Antiguos, célebre por sus templos de piedra dorada y su guardia sagrada: los <b>Escudos del Alba</b>. Su capital, <b>Elarion</b>, albergaba la <i>Gran Basílica del Amanecer</i>, donde se custodiaban reliquias capaces de repeler la Corrupción del Alma.",
-          "La invasión de Zetyar trajo el fin de su gloria: los templos fueron saqueados, las murallas derribadas y el clero ejecutado o dispersado. Hoy, Issardi es un territorio roto, cubierto de ruinas y pueblos fantasmas, donde los pocos supervivientes se ocultan, protegiendo en secreto <b>reliquias menores</b> que podrían despertar de nuevo el poder de sus dioses."
+        { h: "El reino de los Dioses Antiguos", img: "issardi-ruinas", p: [
+          "<b>Issardi</b> tomó el nombre de su capital: devoto de los Dioses Antiguos, con templos de piedra dorada, altares que bendecía Neyra y una guardia sagrada, los <b>Escudos del Alba</b>. Cayó en la <b>Guerra de la Última Aurora</b>, y sobre el mapa entero se extendió el nombre de los vencedores.",
+          "Hoy está en el extremo suroeste de <a href=\"#/zetyar\">Zetyar</a>, la isla que lleva el nombre de quienes la ganaron."
         ]},
-        { h: "Historia breve", ul: [
-          "<b>Era de Devoción.</b> Issardi fue un faro espiritual, guiando reinos vecinos con sus oráculos y sus artes de purificación.",
-          "<b>Guerra de la Última Aurora.</b> Zetyar, respaldado por fuerzas de las Necrópolis, lanzó una ofensiva brutal, corrompiendo incluso a algunos Escudos del Alba.",
-          "<b>Caída y exilio.</b> Con Elarion en ruinas, los issardinos se dispersaron. Los clanes supervivientes viven como peregrinos ocultos."
+        { h: "Lo que queda", img: "issardi-vestigios", p: [
+          "Familias que aún cultivan entre las ruinas de la <b>Estepa de los Vestigios</b> y la soldadesca que las saquea con regularidad. Viejos sacerdotes que rezan a Neyra bajo columnas que ya no sostienen frontones sino cielo. Y santuarios sellados que nadie ha abierto todavía.",
+          "Lo que esos sacerdotes esperan no es una restauración: esperan a quien reclame la herencia de Kaén y convoque a los Dioses Antiguos a un Pacto nuevo."
         ]},
-        { h: "Cultura y sociedad", ul: [
-          "<b>Guardianes de la Luz Menor.</b> Pequeños grupos que custodian reliquias menores.",
-          "<b>Clanes nómadas.</b> Viajan disfrazados de mercaderes o mendigos para evitar la persecución.",
-          "<b>Lengua Velada.</b> Un dialecto antiguo que esconde oraciones en su gramática."
+        { h: "Neyra, la Tejedora", p: [
+          "Diosa de la memoria y el tiempo. Bendijo los altares de Issardi y retiró su protección cuando el reino rompió los Pactos, los acuerdos que lo ligaban a los Dioses Antiguos. No tiene templo en pie ni clero organizado, y sus fieles esperan un Pacto nuevo, no una respuesta."
         ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>Templos Sellados.</b> Algunos aún emiten un tenue poder que impide la entrada del Umbra.",
-          "<b>Reliquias Perdidas.</b> Se dice que, si son reunidas, podrían purgar un bastión de los Arcontes.",
-          "<b>Fieles Ocultos.</b> Pueblos enteros que se hacen pasar por leales a Zetyar, pero guardan santuarios secretos."
+        { h: "Las reliquias", p: [
+          "Los <i>sancta sanctorum</i> de Issardi se sellaron con sus reliquias dentro, y no todos han sido encontrados. Cada reliquia tiene su bendición, su límite y su voz: el rito o el gesto que la despierta. Una reliquia empleada para herir a una criatura viva, o entregada a cambio de algo, se apaga, y ninguna apagada ha vuelto a despertar."
+        ], ul: [
+          "<b>Nymuerú, el que Guarda las Horas.</b> Sacerdote de Neyra entre las ruinas. Conserva qué sabe cada reliquia por la que se le pregunta y cuál es su rito. No quiere la restauración del reino: quiere que las horas se digan a tiempo, aunque no las oiga nadie.",
+          "<b>Orrik de Issardi.</b> Hijo de humana e infernis, es la prueba de lo que la isla hace con los mestizos: los zetarianos lo llaman el Renegado y los issardinos lo tratan como enemigo."
         ]}
       ]
     },
@@ -745,24 +743,42 @@ window.UMBRAELIS = {
       title: "Zetyar",
       quote: "No hay tronos aquí, solo estandartes sobre ruinas.",
       sections: [
-        { h: "Visión general", p: [
-          "<b>Zetyar</b>, el Reino Sin Corona, no es un reino en el sentido tradicional: es un <b>conglomerado de fortalezas, campamentos militares y ciudades saqueadas</b>, dominadas por Infernis que adoptaron el código bélico de los Arcontes Nigromantes.",
-          "La vida en Zetyar está marcada por la ley del más fuerte. Sus ejércitos son mercenarios y saqueadores al servicio de las <b>Torres Negras</b>, intercambiando botines, gemas y esclavos por armas y magia prohibida. En sus fronteras, la corrupción del alma es aceptada como herramienta: los soldados se «bendicen» con marcas arcanas que les dan fuerza a cambio de su humanidad."
+        { h: "La isla que cambió de nombre", img: "zetyar-campamentos", p: [
+          "<b>Zetyar</b> se llama así por quienes la ganaron. Antes se llamó Sarakin, y en ella hubo un reino verdadero, <a href=\"#/issardi\">Issardi</a>.",
+          "Hoy es un no-reino: un conjunto de tribus infernis nómadas, cada una con su jefe y sus guerras por las estepas. Solo las unen dos cosas, el culto a los Arcontes y la renta de las minas. Son malos ingenieros y tienen pocas construcciones estables: viven en campamentos militares y mueven sus rebaños por un territorio nominalmente suyo, demasiado vasto, hostil y poblado para someterlo del todo."
         ]},
-        { h: "Historia breve", ul: [
-          "<b>Forja bélica.</b> Formado por clanes y bandas unificadas bajo un código militar implacable.",
-          "<b>Guerra contra Issardi.</b> Su mayor victoria, que les aseguró acceso a reliquias sagradas y rutas comerciales.",
-          "<b>Alianza oscura.</b> Sus líderes juraron lealtad táctica a las Necrópolis a cambio de protección mágica."
+        { h: "Las Minas Agunara", p: [
+          "El único yacimiento de <b>Gemas de Sangre</b> de Umbraelis, los catalizadores del alma que alimentan la nigromancia de los Arcontes. De ellas salen también diamantes y el hierro con que se forjan las armas, y su comercio financia directamente a las Torres Negras.",
+          "Nadie ha cartografiado Agunara por dentro: son siglos de galerías abiertas sin plan, y solo saben cuáles se comunican quienes bajan a picar. Quien controla Agunara tiene a Ubídume por la garganta."
         ]},
-        { h: "Cultura y sociedad", ul: [
-          "<b>Código del Acero y la Ceniza.</b> Disciplina, obediencia y saqueo.",
-          "<b>Capitanes de Guerra.</b> Cada uno controla su propio territorio y ejército privado.",
-          "<b>Fe Marchita.</b> La religión es reemplazada por culto a la fuerza y al Umbra."
+        { h: "Kharzul y Puerto Cadenas", img: "zetyar-kharzul", p: [
+          "<b>Kharzul</b> es el fuerte de la costa oriental, tallado en un acantilado de basalto y levantado hace una generación. Es la base de la Armada y su única salida al mar. Inexpugnable.",
+          "<b>Puerto Cadenas</b>, pequeño y sin murallas, es por donde entra la mano de obra encadenada que nunca vuelve a embarcar. Los barcos de esclavos no atracan en Kharzul, y entre ellos viaja el contrabando."
         ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>Guarniciones Nómadas.</b> Fortalezas móviles que cambian de ubicación.",
-          "<b>Mercado Sombrío.</b> Lugar donde se comercia con armas malditas y prisioneros.",
-          "<b>Gladiadores Marcados.</b> Campeones bendecidos por la Corrupción."
+        { h: "La Armada y las rutas del Yugo", img: "zetyar-armada", p: [
+          "La <b>Armada de Kharzul</b> asegura que los convoyes de Gemas de Sangre, diamantes, armas y «personalidades» lleguen a la Gran Necrópolis de Ubídume. Hay dos caminos, las <b>rutas del Yugo</b>, nombre de la organización que trafica con esclavos y gemas:"
+        ], ul: [
+          "<b>La travesía directa.</b> Por mar abierto a través del Mar de las Cenizas: rápida y barata, y más peligrosa cuanto más se ciñe al suroeste, hacia los cazaderos de la Cofradía.",
+          "<b>El Camino de Ceniza.</b> Un rodeo por el norte hasta un puerto fuera de carta cerca de Karthane, y el resto por tierra. Lento, caro y fuera del alcance de la Cofradía."
+        ]},
+        { h: "Lo que no hay en otra parte", img: "zetyar-convoy", ul: [
+          "<b>Las Atalayas del Sur.</b> Torres zetarianas que anuncian las incursiones con espejos de día y fuego de noche, mirando a las montañas porque el sur es la dirección que toma el fugitivo.",
+          "<b>La Guarida de los Lobos.</b> Contrabandistas y salteadores de las montañas del sur, con el lobo rojo, endémico de la isla, por emblema.",
+          "<b>La Ciudadela de Kherker.</b> Fortaleza sobre la estepa que sirve de guarnición, depósito y prisión. Se cuentan historias de mazmorras bajo ella y de una ciudad subterránea.",
+          "<b>La Selva del Crepúsculo y el Río de la Serpiente de los Reflejos.</b> Una selva impenetrable llena de criaturas que todos evitan; se dice que sus aguas vuelven translúcido a quien las toca."
+        ]},
+        { h: "Tres religiones", ul: [
+          "<b>La Trascendencia Oscura.</b> La fe oficial de los Arcontes: no pide fe, pide suministro.",
+          "<b>Vortu, el Dios Desterrado.</b> El dios del código de guerra zetariano, que es liturgia más que ética.",
+          "<b>Neyra, la Tejedora.</b> Diosa de la memoria y el tiempo, protectora de la Issardi caída."
+        ]},
+        { h: "Ser infernis aquí", p: [
+          "En el resto de Umbraelis un infernis es un infernis. En Zetyar es el rostro de quien ganó la guerra, y abre puestos de control sin dar explicaciones. Pero sin tribu no eres nadie: Zetyar no es un pueblo, sino una confederación de campamentos, y un infernis sin tribu es una criatura con cuernos y sin quien responda por él.",
+          "Los humanos son el sustrato: pastores, campesinos que pagan, cuerpos que entran por Puerto Cadenas. Solo hay dos excepciones, los Lobos, que eligieron no servir, y lo que queda de Issardi."
+        ]},
+        { h: "Figuras", ul: [
+          "<b>Irvenna Pelaje de Duna.</b> Cabecilla de una banda de Lobos en las montañas del sur, de una familia de los Vestigios. Conoce cuánto tarda cada aviso de las atalayas en llegar al campamento más cercano.",
+          "<b>Doreth la Manifiesta.</b> Contrabandista de Puerto Cadenas cuyo negocio consiste en que el papel diga «esclavos» y nadie mire."
         ]}
       ]
     }
