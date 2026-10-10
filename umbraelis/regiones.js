@@ -57,7 +57,7 @@ window.UMBRAELIS = {
     { slug: "bosque-cadaverico", x: 44, y: 63 },
     { slug: "valle-de-askhaar", x: 50, y: 57 },
     { slug: "tierras-volcanicas-de-vrakk", x: 48.5, y: 47.5 },
-    { slug: "ruinas-de-vath-kor", x: 53, y: 33 },
+    { slug: "vargarda", x: 53, y: 33 },
     { slug: "cordillera-de-kartus", x: 63.5, y: 22 },
     { slug: "montanas-del-fin-del-mundo", x: 78, y: 28 },
     { slug: "cadena-montanosa-de-las-sombras", x: 64.5, y: 37 },
@@ -175,289 +175,6 @@ window.UMBRAELIS = {
 
   regiones: [
     {
-      slug: "necropolis-de-los-arcontes",
-      title: "Necrópolis de los Arcontes",
-      quote: "Corazón inmortal de la Corrupción",
-      sections: [
-        { h: "Visión general", p: [
-          "En el corazón de Umbraelis, allí donde el sol jamás atraviesa la niebla pútrida, se alzan las <b>Necrópolis</b>, tronos eternos de los Arcontes Nigromantes. Estas ciudades no fueron construidas por manos mortales, sino moldeadas a partir de la piedra viva y los huesos de civilizaciones extintas, fusionadas por rituales que quemaron el alma del mundo.",
-          "Cada Necrópolis es una fortaleza vertical: torres afiladas como cuchillas, murallas que se repliegan y expanden como costillas de un titán, y criptas sin fondo que laten al ritmo de un <b>Foco Mortuorio</b>, el corazón arcano que vincula la voluntad del Arconte a su dominio.",
-          "Sus calles están custodiadas por legiones de <b>Centinelas Huecos</b>, guerreros sin vida atrapados en armaduras corroídas, y por <b>Sombras Ligadas</b>, espectros que vigilan desde las cornisas y nunca descansan. Sobre ellas se cierne un cielo perpetuamente crepuscular, desgarrado por relámpagos de energía funeraria. Desde estas fortalezas, la corrupción se extiende como una infección, lenta pero imparable, conectando las Necrópolis a través de túneles profundos y portales arcanos."
-        ]},
-        { h: "Papel en Umbraelis", ul: [
-          "Centros de poder absoluto de los Arcontes Nigromantes.",
-          "Fuente principal de la Corrupción del Alma que carcome las tierras exteriores.",
-          "Puntos de partida para ejércitos, espías y campañas de conquista."
-        ]}
-      ]
-    },
-    {
-      slug: "montanas-del-fin-del-mundo",
-      title: "Montañas del Fin del Mundo",
-      quote: "Allí donde la tierra se quiebra contra el cielo, incluso los muertos tiemblan.",
-      sections: [
-        { h: "Visión general", p: [
-          "Las <b>Montañas del Fin del Mundo</b> se alzan como un muro colosal que marca el límite más lejano de Umbraelis. Sus picos, eternamente cubiertos de nieve, cortan el cielo como cuchillas, y los valles que las separan son azotados por tormentas capaces de borrar aldeas enteras en una sola noche.",
-          "Los viajeros las llaman <i>la espina dorsal del mundo</i>; en las leyendas se las conoce como <i>la muralla del último aliento</i>: más allá de ellas, dicen, solo hay vacío, olvido y un silencio que devora. En lo más profundo de la cordillera podría encontrarse la <b>Fortaleza Original de los Arcontes</b>, o la <b>Torre Primigenia</b> desde la que se selló el destino de las almas de Umbraelis. Nadie ha regresado con pruebas… y pocos han regresado en absoluto."
-        ]},
-        { h: "Historia", p: [
-          "Desde la Primera Ascensión, las Montañas del Fin del Mundo han sido un lugar prohibido. Crónicas arcanas hablan de un tiempo en que no estaban cubiertas de hielo, sino de bosques negros y ríos de piedra líquida, hasta que los Arcontes sellaron algo en su interior. Las tormentas perpetuas no son naturales: se dice que nacen de los susurros y aullidos de un poder antiguo atrapado en lo más hondo."
-        ]},
-        { h: "Cultura y sociedad", p: [
-          "No existen asentamientos permanentes en el corazón de la cordillera, pero en sus estribaciones sobreviven <b>tribus nómadas</b> que comercian con pieles, huesos y hierro negro extraído de las vetas heladas. Hablan de «los Caminos del Eco», rutas secretas que atraviesan el hielo y que solo los iniciados conocen. Algunos clanes creen que alcanzar la Fortaleza Original es un rito de muerte honorable, un viaje del que no se espera regreso."
-        ]},
-        { h: "Facciones y personajes clave", ul: [
-          "<b>Los Vigías de Escarcha.</b> Guerreros ermitaños que patrullan los pasos más peligrosos y exigen tributo a quienes intentan cruzarlos.",
-          "<b>Los Cartógrafos de Hueso.</b> Exploradores y mercenarios que mapean rutas imposibles a cambio de precios impíos… o favores aún más oscuros.",
-          "<b>Anarion el Exiliado.</b> Antiguo aprendiz de un Arconte, obsesionado con hallar la Torre Primigenia. Vive en una fortaleza abandonada en las faldas de la cordillera."
-        ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>Tormentas Eternaescarcha.</b> Ventiscas sobrenaturales que aparecen sin aviso, impulsadas por magia residual.",
-          "<b>Grietas sin Fondo.</b> Abismos que, según las leyendas, no conducen al subsuelo, sino a otras realidades.",
-          "<b>La Marcha de los Huecos.</b> Procesiones de armaduras vacías que avanzan por las laderas en noches sin luna, siguiendo rutas invisibles."
-        ]}
-      ]
-    },
-    {
-      slug: "bosques-de-aelvarn",
-      title: "Bosques de Aelvarn",
-      quote: "Donde las raíces recuerdan lo que los vivos han olvidado.",
-      sections: [
-        { h: "Visión general", p: [
-          "Los <b>Bosques de Aelvarn</b> son un vasto manto verde que resiste, contra toda lógica, el avance de la corrupción nigromántica. Sus árboles son tan antiguos que sus cortezas están tatuadas con runas vivas, y sus copas se entrelazan formando un techo de sombras y luces moteadas.",
-          "Entre sus claros se ocultan aldeas élficas, santuarios druidas y círculos de piedra que aún resuenan con el eco de juramentos pronunciados hace milenios. Los Aelvarn no se rigen por la autoridad de los Arcontes, pero tampoco los desafían abiertamente: el bosque sabe esperar, y sus guardianes viven siglos."
-        ]},
-        { h: "Historia", p: [
-          "Antes de la Primera Ascensión, Aelvarn era un bosque sagrado consagrado a los dioses de la vida y la muerte. Durante la guerra contra los Arcontes fue uno de los últimos refugios de los rebeldes, protegido por un muro viviente de espinas y niebla. Las leyendas cuentan que los druidas sellaron allí fragmentos de almas puras para impedir que cayeran en manos de los nigromantes. Desde entonces, extrañas luces flotan entre los árboles en noches sin luna."
-        ]},
-        { h: "Cultura y sociedad", p: [
-          "Los habitantes del bosque, <b>los Guardianes Verdes</b>, siguen leyes orales y ritos lunares. La caza, la recolección y la magia natural forman parte de su vida diaria. Son desconfiados con los forasteros, pero quienes se ganan su favor reciben hospitalidad, guía y protección. Cada clan cuida un fragmento de bosque, y sus líderes se reúnen bajo el Gran Roble en los solsticios para decidir asuntos comunes."
-        ]},
-        { h: "Facciones y personajes clave", ul: [
-          "<b>Los Guardianes Verdes.</b> Protectores juramentados del bosque, expertos en emboscadas y magia druídica.",
-          "<b>El Círculo de Corteza.</b> Consejo secreto de ancianos que conocen el verdadero alcance del poder de Aelvarn.",
-          "<b>Lyssara, Voz de las Raíces.</b> Una elfa que asegura oír a los árboles susurrar profecías."
-        ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>Niebla Viviente.</b> Aparece y desaparece a voluntad del bosque, confundiendo a los intrusos.",
-          "<b>Luz de las Almas.</b> Orbes etéreos que pueden guiar… o perder a los viajeros.",
-          "<b>Animales del Recuerdo.</b> Bestias que portan fragmentos de memoria de antiguos héroes."
-        ]}
-      ]
-    },
-    {
-      slug: "ruinas-de-vath-kor",
-      title: "Ruinas de Vath-Kor",
-      quote: "Cuando la piedra se quiebra, los juramentos antiguos sangran.",
-      sections: [
-        { h: "Visión general", p: [
-          "En el corazón de un valle cubierto por nubes perpetuas y cicatrices de antiguas batallas yacen las <b>Ruinas de Vath-Kor</b>, antaño una ciudad-estado orgullosa, ahora un cementerio abierto. Sus templos se han derrumbado, sus murallas son devoradas por la hiedra oscura, y las avenidas que un día resonaron con marchas y cantos de victoria están pobladas por ecos huecos.",
-          "Los viajeros que se adentran demasiado juran oír el golpear de tambores de guerra y el choque de armas… sonidos que se apagan al cruzar cierto umbral, dejando un silencio insoportable."
-        ]},
-        { h: "Historia", p: [
-          "Fundada como bastión de resistencia contra el creciente poder nigromántico, Vath-Kor era famosa por su orden de guerreros-sacerdotes, los <b>Juramentados de la Llama Blanca</b>. Según las crónicas, resistieron años de asedio hasta que los Arcontes liberaron sobre la ciudad una plaga de fuego negro que devoraba piedra y carne por igual.",
-          "En el último día, el líder de la ciudad, <b>Korrath el Firme</b>, rompió su espada en la plaza central como símbolo de rendición… y fue inmediatamente convertido en un sirviente no-muerto para humillar a su pueblo. Desde entonces, su figura fantasmal aún recorre las ruinas."
-        ]},
-        { h: "Quién queda", ul: [
-          "<b>Carroñeros y saqueadores</b> que buscan reliquias prohibidas.",
-          "<b>Cultos al eco de Korrath</b>, que creen que su espíritu aún puede guiar una rebelión contra los Arcontes.",
-          "Criaturas nacidas del fuego negro, deformadas y furiosas."
-        ]},
-        { h: "Facciones y personajes clave", ul: [
-          "<b>El Eco de Korrath.</b> Aparición de su último líder, atrapado entre honor y venganza.",
-          "<b>Los Hermanos del Humo.</b> Banda de saqueadores especializados en el contrabando de reliquias malditas.",
-          "<b>El Guardián de las Cadenas.</b> Una figura armada que custodia la entrada al templo principal; nadie ha visto su rostro."
-        ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>Fuego Negro.</b> Todavía arde en algunos escombros, consumiendo incluso el alma de quien lo toca.",
-          "<b>La Niebla de los Caídos.</b> Surge al anochecer y proyecta visiones de la última batalla.",
-          "<b>Sellos de Rencor.</b> Runas que reaccionan con violencia ante los intrusos."
-        ]}
-      ]
-    },
-    {
-      slug: "tierras-volcanicas-de-vrakk",
-      title: "Tierras Volcánicas de Vrakk",
-      quote: "Aquí, la tierra respira… y su aliento es fuego.",
-      sections: [
-        { h: "Visión general", p: [
-          "Las <b>Tierras Volcánicas de Vrakk</b> son un infierno abierto en la corteza de Umbraelis: un paisaje de cráteres humeantes, ríos de magma y llanuras de ceniza que se extienden hasta donde alcanza la vista. El aire está cargado de azufre y calor abrasador, y el cielo se tiñe de rojo por la constante erupción de volcanes activos.",
-          "Se cree que este territorio nació durante la Primera Ascensión, cuando los Arcontes liberaron una energía descomunal para sellar una grieta dimensional. Desde entonces, Vrakk es una herida abierta que nunca se enfría. La propia tierra parece viva: se agita, cruje y escupe fuego como si intentara expulsar algo que late en sus entrañas."
-        ]},
-        { h: "Historia", p: [
-          "Vrakk era en tiempos antiguos el hogar de un pueblo minero y guerrero que extraía metales raros de las profundidades. Su riqueza fue su condena: los Arcontes codiciaron sus recursos para forjar armas imbuidas con almas cautivas. La resistencia de los vrakkanos provocó un castigo sin precedentes: la liberación del <b>Corazón de Fuego</b>, una fuente de magia volcánica tan potente que arrasó toda la región. Las leyendas aseguran que el Corazón aún palpita bajo el Monte Korr’Zhul."
-        ]},
-        { h: "Cultura y sociedad", ul: [
-          "<b>Clanes de Hierro Fundido.</b> Descendientes de los mineros originales, adaptados a la vida en túneles cercanos al magma.",
-          "<b>Forjadores del Alma.</b> Herreros solitarios que trabajan con metal embrujado para crear armas únicas… o malditas.",
-          "<b>Bestias Magmáticas.</b> Criaturas que surgen de las fisuras para cazar y desaparecer en el fuego."
-        ]},
-        { h: "Facciones y personajes clave", ul: [
-          "<b>Korr’Zhul Dormido.</b> Gigante elemental atrapado bajo el monte principal, cuyas «pesadillas» provocan erupciones.",
-          "<b>Maela la Forjamuerte.</b> Maestra herrera capaz de trabajar metal mezclado con fragmentos de alma.",
-          "<b>Los Hijos del Corazón.</b> Fanáticos que quieren liberar por completo el Corazón de Fuego."
-        ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>Lluvias de Ceniza.</b> Reducen la visibilidad y provocan asfixia.",
-          "<b>Flujos de Magma Vivo.</b> El magma aquí actúa como un ente consciente que persigue el calor vital.",
-          "<b>Temblores Encadenados.</b> Pequeñas sacudidas que preceden a eventos catastróficos."
-        ]}
-      ]
-    },
-    {
-      slug: "valle-de-askhaar",
-      title: "Valle de Askhaar",
-      quote: "Aquí el viento aún recuerda los nombres de las ciudades que ya no están.",
-      map: "img/llanuras-de-askhaar.jpg",
-      mapCaption: "Las Llanuras de Askhaar",
-      sections: [
-        { h: "Visión general", p: [
-          "El <b>Valle de Askhaar</b>, el Corredor del Yugo, es la gran llanura de tierra rojiza y colinas bajas que se extiende entre las tierras volcánicas de <b>Vrakk</b>, al norte, y el <b>Bosque Cadavérico</b>, al sur. Al oeste, el camino conduce hacia Tirak Thal; al este, hacia <b>Ubídume</b>, y en ese borde oriental se alza la fortaleza de <b>Mal-Karrith</b>, «la Cancela de Hierro».",
-          "Fue siempre tierra de jinetes y rebaños, de horizontes abiertos y cultura ecuestre de raíz sármata. Hoy es otra cosa: un corredor militar disputado, recorrido por patrullas y caravanas armadas, donde cada ciudad en pie parece una excepción."
-        ]},
-        { h: "Historia", p: [
-          "Durante generaciones, el valle fue el hogar de los <b>vrakhari</b>, un pueblo de ciudades hermanas, jinetes acorazados y pastores trashumantes. Sus ciudades se alineaban a lo largo del corredor, al sur junto al linde del Bosque Cadavérico y al norte a los pies de las montañas.",
-          "El <b>Yugo</b> lo cambió todo. Ciudad tras ciudad fue tomada y arrasada, hasta que el valle se convirtió en un cementerio de ciudades."
-        ], ul: [
-          "<b>Vorlanthe, la Ciudad Vencida.</b> Gran ruina a los pies de Mal-Karrith, que aún conserva la memoria de la resistencia.",
-          "<b>Las Ciudades Ceniza.</b> Karlanthe, Duvorra, Eskvarr y Tholanthe, tomadas y destruidas sobre el borde del Bosque Cadavérico."
-        ]},
-        { h: "Cultura y sociedad", p: [
-          "Los vrakhari que sobreviven viven entre las ruinas de lo que fueron: jinetes sin ciudad, refugiados de todas las comarcas, pastores que siguen moviendo sus rebaños por tierras que ya no son suyas. Hablan distintos dialectos, pero comparten la misma mirada de quien ya ha perdido su casa una vez.",
-          "El valle sigue siendo tierra de caballos y de lanzas. Quien lo cruza aprende pronto que aquí la confianza se gana despacio y se pierde deprisa."
-        ]},
-        { h: "Lugares y facciones clave", ul: [
-          "<b>Vareth.</b> La única ciudad vrakhari que aún resiste en el corredor. Amurallada, abarrotada de refugiados y sostenida a pulso, es la última llama del valle.",
-          "<b>Los Jinetes Rotos.</b> Pequeña fuerza de jinetes vrakhari libres, sin juramento a ninguna de las casas de Vrakk. Sostienen las puertas de Vareth.",
-          "<b>Mal-Karrith, la Cancela de Hierro.</b> Fortaleza levantada en basalto negro y hierro, que cierra el paso hacia Ubídume.",
-          "<b>El Campamento del Yugo.</b> Gran campamento fortificado sobre la ruta principal del valle, base de las fuerzas que lo vigilan.",
-          "<b>La Ruta de las Caravanas Rojas.</b> Camino empedrado que cruza el valle de norte a sur, la vía más transitada y la más vigilada.",
-          "<b>Las casas de Vrakk.</b> Melqar, Korruval y Dravok, señores de las montañas del norte, que observan el valle desde sus fortalezas."
-        ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>Ciudades muertas.</b> Ruinas silenciosas a lo largo del corredor, donde conviene no acampar.",
-          "<b>Patrullas y puestos del Yugo.</b> Fortines que controlan los caminos y cobran con sangre a quien no paga.",
-          "<b>Refugiados y salteadores.</b> La desesperación convierte a vecinos en peligros.",
-          "<b>El borde del Bosque Cadavérico.</b> Al sur, la llanura termina contra una línea de árboles muertos de la que es mejor no acercarse."
-        ]}
-      ]
-    },
-    {
-      slug: "bosque-cadaverico",
-      title: "Bosque Cadavérico",
-      quote: "Aquí, hasta las hojas tienen hambre.",
-      sections: [
-        { h: "Visión general", p: [
-          "El <b>Bosque Cadavérico</b> se extiende como una herida oscura en el mapa de Umbraelis: un lugar donde la luz apenas penetra, el aire huele a tierra podrida y la vegetación parece más hueso que madera. Sus árboles, retorcidos y huecos, están cubiertos de líquenes blanquecinos que recuerdan la piel de un cadáver, y en sus raíces anidan criaturas que se alimentan de carne… y de recuerdos.",
-          "No es un bosque muerto, sino <b>un bosque que se alimenta de la muerte</b>. Las leyendas dicen que surgió cuando un Arconte selló aquí a un dios moribundo, cuyo cuerpo se pudrió hasta convertirse en tierra fértil para horrores. Cada año, su latido residual convoca una <b>Noche de Hambre</b>, donde las raíces se mueven, los troncos se agrietan y el bosque sale a cazar."
-        ]},
-        { h: "Historia", p: [
-          "Antaño, el lugar era un bosque sagrado llamado <b>Sylthar</b>, protegido por druidas y espíritus guardianes. La Primera Ascensión lo condenó cuando un Arconte lo convirtió en un santuario profano para experimentar con necromancia vegetal. La fusión de magia de vida y magia de muerte dio origen a este ecosistema antinatural, que desde entonces crece alimentándose de la carne de todo lo que entra."
-        ]},
-        { h: "Cultura y sociedad", p: ["Nadie habita en el Bosque Cadavérico de forma permanente, pero:"], ul: [
-          "<b>Los Cosechadores de Sombra</b> se adentran para recolectar savia negra, muy valiosa como veneno o componente ritual.",
-          "<b>Ermitaños de la Podredumbre</b> viven en chozas de hueso y corteza, adorando al supuesto dios enterrado.",
-          "Criaturas vegetomórficas acechan en silencio a los incautos."
-        ]},
-        { h: "Facciones y personajes clave", ul: [
-          "<b>El Enraizado.</b> Un ser semihumano, semiarbóreo, que asegura ser la voz del dios muerto.",
-          "<b>Los Cosechadores de Sombra.</b> Contrabandistas de savia negra que comercian con nigromantes.",
-          "<b>La Doncella de Corteza.</b> Aparición que guía o engaña a los viajeros con igual facilidad."
-        ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>Savia Negra.</b> Viscosa, corrosiva para la carne, embriagadora para el espíritu.",
-          "<b>Raíces Errantes.</b> Se mueven bajo tierra para atrapar y drenar víctimas.",
-          "<b>Hongos de Memoria.</b> Consumirlos otorga visiones… a costa de perder recuerdos reales."
-        ]}
-      ]
-    },
-    {
-      slug: "mar-de-las-cenizas",
-      title: "Mar de las Cenizas",
-      quote: "Donde las olas llevan huesos… y las velas, mentiras.",
-      sections: [
-        { h: "Visión general", p: [
-          "El <b>Mar de las Cenizas</b> es un vasto y opresivo océano gris donde el agua parece mezclada con polvo y hollín. Las olas rompen con un sonido hueco, como si algo las ahogara desde abajo. La visibilidad rara vez supera el horizonte cercano: una bruma perpetua cubre el mar, difuminando los límites entre cielo y agua.",
-          "Navegar por él es arriesgarse a perderse para siempre, no solo por las corrientes impredecibles, sino por las <b>flotas piratas</b> que lo patrullan. Estos corsarios, los <b>Hijos de la Ceniza</b>, son más que saqueadores: se dice que sellan pactos con espíritus marinos y beben sangre mezclada con agua del propio mar para asegurar que sus almas siempre encuentren el camino de regreso… aunque sea al fondo."
-        ]},
-        { h: "Historia", p: [
-          "Antes de la Primera Ascensión, el Mar de las Cenizas era una ruta comercial vital que conectaba varias ciudades-estado costeras. Durante la guerra, los Arcontes lo maldijeron al hundir en sus profundidades una flota enemiga junto con un artefacto prohibido. La maldición convirtió sus aguas en una tumba líquida que nunca se calma.",
-          "Los marinos aseguran que, en noches sin luna, es posible ver a los barcos hundidos navegando de nuevo, tripulados por esqueletos envueltos en algas, en busca de venganza contra cualquier embarcación viva."
-        ]},
-        { h: "Cultura y sociedad", ul: [
-          "<b>Pueblos flotantes</b> formados por embarcaciones unidas, donde se intercambian bienes y favores.",
-          "<b>Tripulaciones piratas</b> que saquean, comercian con esclavos y trafican reliquias del fondo.",
-          "<b>Ermitas de vigías</b> en islotes, donde solitarios envían señales de humo o fuego para advertir de ataques."
-        ]},
-        { h: "Facciones y personajes clave", ul: [
-          "<b>Los Hijos de la Ceniza.</b> Confederación de capitanes piratas que obedecen un código sangriento.",
-          "<b>Capitana Syrrha Diente de Coral.</b> Maestra en emboscadas y portadora de un timón encantado que puede cambiar el rumbo del viento."
-        ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>El Guardián del Faro Hundido.</b> Un espectro que guía a las naves a su perdición.",
-          "<b>Tormentas de Ceniza.</b> Reducen la visibilidad a pocos metros y abrasan la piel.",
-          "<b>Aguas Engullidoras.</b> Remolinos que arrastran barcos a grutas subacuáticas.",
-          "<b>Barcos Fantasma.</b> Aparecen repentinamente y desaparecen igual de rápido."
-        ]}
-      ]
-    },
-    {
-      slug: "cadena-montanosa-de-las-sombras",
-      title: "Cadena Montañosa de las Sombras",
-      quote: "Bajo estas cumbres, el pasado nunca duerme.",
-      sections: [
-        { h: "Visión general", p: [
-          "La <b>Cadena Montañosa de las Sombras</b> se alza como un muro oscuro entre regiones, una sucesión de picos afilados y laderas cubiertas por una niebla densa que rara vez se disipa. A la luz del amanecer, las sombras proyectadas por sus cumbres forman figuras imposibles que parecen moverse… o vigilar.",
-          "No es la altura lo que vuelve peligroso este lugar, sino lo que se oculta <b>debajo</b>: una red de túneles ancestrales, tallados mucho antes de la Primera Ascensión, que conecta con cámaras subterráneas, ruinas olvidadas y templos caídos. Muchos pasajes están derrumbados o plagados de trampas, pero otros llevan a tesoros… y a horrores que nunca deberían haber sido despertados."
-        ]},
-        { h: "Historia", p: [
-          "La tradición oral de las tribus cercanas afirma que la cadena fue el corazón de un reino subterráneo desaparecido, <b>Thur-Vael</b>, hogar de artesanos y magos que trabajaban la piedra y el metal con un dominio insuperable. Cuando los Arcontes iniciaron su ascenso, Thur-Vael intentó sellar sus túneles para evitar la invasión… pero algo desde dentro comenzó a devorar su imperio. Hoy solo quedan ruinas a medio colapsar, pasajes que se hunden en la oscuridad y guardianes espectrales que aún patrullan las cámaras sagradas."
-        ]},
-        { h: "Cultura y sociedad", p: ["No hay asentamientos permanentes en la zona, pero:"], ul: [
-          "<b>Clanes nómadas</b> usan entradas ocultas para refugiarse durante las tormentas.",
-          "<b>Buscadores de eco</b> (arqueólogos, mercenarios y saqueadores) recorren los túneles en busca de artefactos.",
-          "<b>Guardianes Encadenados</b> protegen los accesos más profundos, siguiendo juramentos de un reino que ya no existe."
-        ]},
-        { h: "Facciones y personajes clave", ul: [
-          "<b>Los Guardianes Encadenados.</b> Espíritus armados con armaduras negras, vinculados a los juramentos de Thur-Vael.",
-          "<b>Maerkos el Sombrista.</b> Contrabandista que usa los túneles para mover mercancías prohibidas.",
-          "<b>La Voz Hueca.</b> Eco persistente de un mago de Thur-Vael que aún susurra en las profundidades."
-        ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>Colapsos súbitos.</b> Derrumbes que pueden aislar a los viajeros.",
-          "<b>Ecos Desorientadores.</b> Sonidos que confunden la orientación en los túneles.",
-          "<b>Runas Inestables.</b> Antiguas defensas mágicas que reaccionan de forma impredecible."
-        ]}
-      ]
-    },
-    {
-      slug: "karthane",
-      title: "Karthane",
-      quote: "Siete bastiones, un juramento: jamás caer.",
-      sections: [
-        { h: "Visión general", p: [
-          "Karthane es una leyenda con muros. Desde fuera, pocos creen que exista; para los que han visto sus torres, es una fortaleza inmortal. Está compuesta por <b>siete bastiones ciclópeos</b>, unidos por puentes elevados que forman una muralla de hierro y piedra contra el avance de los Arcontes Nigromantes y sus ejércitos no muertos.",
-          "Durante siglos, Karthane ha resistido asedios ininterrumpidos gracias a su arquitectura impenetrable, su disciplina militar y su aislamiento casi absoluto. Pero la fuerza de sus muros es igualada por la rigidez de su sociedad: puertas siempre cerradas, leyes severas y castigos públicos que aseguran el orden. Los extranjeros rara vez son admitidos, y muchos han muerto intentando cruzar sus umbrales. Dentro, la aparente prosperidad oculta una decadencia moral corrosiva: la nobleza vive para intrigas cortesanas, el pueblo obedece sin rechistar, y la compasión es un lujo que pocos pueden permitirse."
-        ]},
-        { h: "Historia", p: [
-          "Fundada durante la Primera Ascensión, Karthane fue concebida como <b>la última fortaleza</b> de la humanidad frente a la corrupción. La leyenda cuenta que sus siete bastiones fueron levantados sobre siete colinas, cada uno custodiado por una casa noble con su propio escudo, ejército y tradiciones. En un pacto ancestral, las casas juraron mantener sus puertas cerradas al mundo exterior hasta que el peligro de los Arcontes desapareciera… algo que, siglos después, aún no ha ocurrido."
-        ]},
-        { h: "Cultura y sociedad", p: [
-          "La nobleza controla todos los recursos y dicta leyes férreas; el pueblo vive bajo disciplina militar, entrenado para resistir asedios y servir en las defensas. La moral pública se sustenta en honor, obediencia y deber… aunque la corrupción política es tan antigua como las murallas. Los siete bastiones tienen especializaciones propias: forja, víveres, defensa de muros, logística, artes arcanas, archivo histórico y diplomacia interna."
-        ]},
-        { h: "Facciones y personajes clave", ul: [
-          "<b>Conde Vaelor Varendor.</b> Señor del Bastión Varendor, estratega implacable.",
-          "<b>La Guardia de Hierro.</b> Cuerpo de élite que patrulla murallas y puentes elevados.",
-          "<b>El Consejo de Siete.</b> Asamblea de los señores de cada bastión, más interesados en la política interna que en el exterior."
-        ]},
-        { h: "Peculiaridades y peligros", ul: [
-          "<b>Puertas Infranqueables.</b> Se abren solo por orden del Consejo y bajo juramento sagrado.",
-          "<b>Asedios Perpetuos.</b> Ejércitos no muertos acampan eternamente en la periferia.",
-          "<b>Intriga Interna.</b> Alianzas y traiciones dentro del Consejo pueden cambiar el destino de la ciudad."
-        ]}
-      ]
-    },
-    {
       slug: "paramos-del-sur",
       title: "Páramos del Sur",
       quote: "En el silencio del desierto, cada sombra tiene un precio.",
@@ -504,6 +221,7 @@ window.UMBRAELIS = {
         ]}
       ]
     },
+
     {
       slug: "tirak-thal",
       title: "Tirak Thal",
@@ -559,6 +277,309 @@ window.UMBRAELIS = {
         ]}
       ]
     },
+
+    {
+      slug: "necropolis-de-los-arcontes",
+      title: "Necrópolis de los Arcontes",
+      quote: "Corazón inmortal de la Corrupción",
+      sections: [
+        { h: "Visión general", p: [
+          "En el corazón de Umbraelis, allí donde el sol jamás atraviesa la niebla pútrida, se alzan las <b>Necrópolis</b>, tronos eternos de los Arcontes Nigromantes. Estas ciudades no fueron construidas por manos mortales, sino moldeadas a partir de la piedra viva y los huesos de civilizaciones extintas, fusionadas por rituales que quemaron el alma del mundo.",
+          "Cada Necrópolis es una fortaleza vertical: torres afiladas como cuchillas, murallas que se repliegan y expanden como costillas de un titán, y criptas sin fondo que laten al ritmo de un <b>Foco Mortuorio</b>, el corazón arcano que vincula la voluntad del Arconte a su dominio.",
+          "Sus calles están custodiadas por legiones de <b>Centinelas Huecos</b>, guerreros sin vida atrapados en armaduras corroídas, y por <b>Sombras Ligadas</b>, espectros que vigilan desde las cornisas y nunca descansan. Sobre ellas se cierne un cielo perpetuamente crepuscular, desgarrado por relámpagos de energía funeraria. Desde estas fortalezas, la corrupción se extiende como una infección, lenta pero imparable, conectando las Necrópolis a través de túneles profundos y portales arcanos."
+        ]},
+        { h: "Papel en Umbraelis", ul: [
+          "Centros de poder absoluto de los Arcontes Nigromantes.",
+          "Fuente principal de la Corrupción del Alma que carcome las tierras exteriores.",
+          "Puntos de partida para ejércitos, espías y campañas de conquista."
+        ]}
+      ]
+    },
+
+    {
+      slug: "montanas-del-fin-del-mundo",
+      title: "Montañas del Fin del Mundo",
+      quote: "Allí donde la tierra se quiebra contra el cielo, incluso los muertos tiemblan.",
+      sections: [
+        { h: "Visión general", p: [
+          "Las <b>Montañas del Fin del Mundo</b> se alzan como un muro colosal que marca el límite más lejano de Umbraelis. Sus picos, eternamente cubiertos de nieve, cortan el cielo como cuchillas, y los valles que las separan son azotados por tormentas capaces de borrar aldeas enteras en una sola noche.",
+          "Los viajeros las llaman <i>la espina dorsal del mundo</i>; en las leyendas se las conoce como <i>la muralla del último aliento</i>: más allá de ellas, dicen, solo hay vacío, olvido y un silencio que devora. En lo más profundo de la cordillera podría encontrarse la <b>Fortaleza Original de los Arcontes</b>, o la <b>Torre Primigenia</b> desde la que se selló el destino de las almas de Umbraelis. Nadie ha regresado con pruebas… y pocos han regresado en absoluto."
+        ]},
+        { h: "Historia", p: [
+          "Desde la Primera Ascensión, las Montañas del Fin del Mundo han sido un lugar prohibido. Crónicas arcanas hablan de un tiempo en que no estaban cubiertas de hielo, sino de bosques negros y ríos de piedra líquida, hasta que los Arcontes sellaron algo en su interior. Las tormentas perpetuas no son naturales: se dice que nacen de los susurros y aullidos de un poder antiguo atrapado en lo más hondo."
+        ]},
+        { h: "Cultura y sociedad", p: [
+          "No existen asentamientos permanentes en el corazón de la cordillera, pero en sus estribaciones sobreviven <b>tribus nómadas</b> que comercian con pieles, huesos y hierro negro extraído de las vetas heladas. Hablan de «los Caminos del Eco», rutas secretas que atraviesan el hielo y que solo los iniciados conocen. Algunos clanes creen que alcanzar la Fortaleza Original es un rito de muerte honorable, un viaje del que no se espera regreso."
+        ]},
+        { h: "Facciones y personajes clave", ul: [
+          "<b>Los Vigías de Escarcha.</b> Guerreros ermitaños que patrullan los pasos más peligrosos y exigen tributo a quienes intentan cruzarlos.",
+          "<b>Los Cartógrafos de Hueso.</b> Exploradores y mercenarios que mapean rutas imposibles a cambio de precios impíos… o favores aún más oscuros.",
+          "<b>Anarion el Exiliado.</b> Antiguo aprendiz de un Arconte, obsesionado con hallar la Torre Primigenia. Vive en una fortaleza abandonada en las faldas de la cordillera."
+        ]},
+        { h: "Peculiaridades y peligros", ul: [
+          "<b>Tormentas Eternaescarcha.</b> Ventiscas sobrenaturales que aparecen sin aviso, impulsadas por magia residual.",
+          "<b>Grietas sin Fondo.</b> Abismos que, según las leyendas, no conducen al subsuelo, sino a otras realidades.",
+          "<b>La Marcha de los Huecos.</b> Procesiones de armaduras vacías que avanzan por las laderas en noches sin luna, siguiendo rutas invisibles."
+        ]}
+      ]
+    },
+
+    {
+      slug: "bosques-de-aelvarn",
+      title: "Bosques de Aelvarn",
+      quote: "Donde las raíces recuerdan lo que los vivos han olvidado.",
+      sections: [
+        { h: "Visión general", p: [
+          "Los <b>Bosques de Aelvarn</b> son un vasto manto verde que resiste, contra toda lógica, el avance de la corrupción nigromántica. Sus árboles son tan antiguos que sus cortezas están tatuadas con runas vivas, y sus copas se entrelazan formando un techo de sombras y luces moteadas.",
+          "Entre sus claros se ocultan aldeas élficas, santuarios druidas y círculos de piedra que aún resuenan con el eco de juramentos pronunciados hace milenios. Los Aelvarn no se rigen por la autoridad de los Arcontes, pero tampoco los desafían abiertamente: el bosque sabe esperar, y sus guardianes viven siglos."
+        ]},
+        { h: "Historia", p: [
+          "Antes de la Primera Ascensión, Aelvarn era un bosque sagrado consagrado a los dioses de la vida y la muerte. Durante la guerra contra los Arcontes fue uno de los últimos refugios de los rebeldes, protegido por un muro viviente de espinas y niebla. Las leyendas cuentan que los druidas sellaron allí fragmentos de almas puras para impedir que cayeran en manos de los nigromantes. Desde entonces, extrañas luces flotan entre los árboles en noches sin luna."
+        ]},
+        { h: "Cultura y sociedad", p: [
+          "Los habitantes del bosque, <b>los Guardianes Verdes</b>, siguen leyes orales y ritos lunares. La caza, la recolección y la magia natural forman parte de su vida diaria. Son desconfiados con los forasteros, pero quienes se ganan su favor reciben hospitalidad, guía y protección. Cada clan cuida un fragmento de bosque, y sus líderes se reúnen bajo el Gran Roble en los solsticios para decidir asuntos comunes."
+        ]},
+        { h: "Facciones y personajes clave", ul: [
+          "<b>Los Guardianes Verdes.</b> Protectores juramentados del bosque, expertos en emboscadas y magia druídica.",
+          "<b>El Círculo de Corteza.</b> Consejo secreto de ancianos que conocen el verdadero alcance del poder de Aelvarn.",
+          "<b>Lyssara, Voz de las Raíces.</b> Una elfa que asegura oír a los árboles susurrar profecías."
+        ]},
+        { h: "Peculiaridades y peligros", ul: [
+          "<b>Niebla Viviente.</b> Aparece y desaparece a voluntad del bosque, confundiendo a los intrusos.",
+          "<b>Luz de las Almas.</b> Orbes etéreos que pueden guiar… o perder a los viajeros.",
+          "<b>Animales del Recuerdo.</b> Bestias que portan fragmentos de memoria de antiguos héroes."
+        ]}
+      ]
+    },
+
+    {
+      slug: "vargarda",
+      title: "Vargärda",
+      quote: "Aquí no se muere de frío. Se muere de viejo, de hierro o de olvido.",
+      map: "img/vargarda-mapa.jpg",
+      mapCaption: "Mapa de Vargärda, el Norte de Umbraelis",
+      sections: [
+        { h: "Visión general", p: [
+          "<b>Vargärda</b> es la tierra más al norte del continente: montañas de hierro, fiordos, bosques de niebla y valles donde la nieve aguanta la mitad del año. Ningún imperio la ha doblegado entera.",
+          "Está repartida entre seis reinos que apenas se fían entre sí (<b>Valdrenn, Askelheim, Mörkald, Vårskald, Grimstahl y Kaldorn</b>) y varios pueblos que no responden a ningún trono."
+        ]},
+        { h: "Los Järvik, hijos del hierro", p: [
+          "Nórdicos de la Cordillera de Kartus y de la costa. No tienen rey: se organizan en clanes con un <b>jarl</b> elegido por sus hazañas, una <b>völva</b> que habla con los ancestros y una asamblea, el <b>Thing</b>, donde se decide la guerra y la paz.",
+          "Para ellos la palabra es ley. El peor insulto es <i>argr</i> (cobarde), y negar hospitalidad a un viajero no se perdona."
+        ], ul: [
+          "<b>Eisenvöldr, el Pueblo del Hierro.</b> Forjadores que sueñan con reavivar las antiguas Forjas del Trueno.",
+          "<b>Bjarnheimr, el Hogar del Oso.</b> Cazadores y domadores de bestias, con sus berserkir.",
+          "<b>Sköll.</b> Los clanes de la costa norte: marineros de drakkar que viven mirando al mar de las Cenizas."
+        ]},
+        { h: "Los Fírvath, guardianes de túmulos", p: [
+          "Celtas y druidas que huyeron al norte cuando cayó su reino. No hay un alto rey: son muchos <i>tuatha</i> pequeños que se reúnen en <b>Samhain</b>, la noche de los muertos. No usan escritura, y la memoria del pueblo la guardan los bardos.",
+          "Entierran a sus muertos sin quemarlos, porque creen que el cuerpo debe seguir entero para la otra vida. Sus druidas piden permiso a los espíritus en vez de someterlos, y esa es la gran diferencia entre ellos y los nigromantes."
+        ]},
+        { h: "Los Aelvari del Norte, elfos de hielo", p: [
+          "Una colonia élfica que quedó aislada del mar hace siglos y acabó haciéndose vikinga: barbas, trenzas, tatuajes rúnicos azules, hachas y arcos compuestos. Siguen siendo elfos y viven cientos de años, pero la mayoría ya no recuerda el nombre de la tierra de la que partieron.",
+          "Su proverbio dice: <i>«Bailamos con lobos porque los cisnes nos abandonaron.»</i> <b>Salthavn</b>, su ciudad, está ocupada, y los libres se esconden en los Bosques de Niebla."
+        ]},
+        { h: "Lugares", ul: [
+          "<b>Salthavn.</b> Puerto de longhouses con tallas élficas, hoy bajo vigilancia y con barrio cerrado.",
+          "<b>Bosques de Niebla Eterna.</b> Aldeas en las copas de los árboles que la niebla esconde de los extraños.",
+          "<b>Cordillera de Kartus.</b> Cuevas, forjas y refugios donde se mezclan todos los pueblos del norte.",
+          "<b>Colinas de Brenna y Valles de Tir-Avel.</b> Tierras fírvath, de fortalezas de colina y graneros."
+        ]},
+        { h: "Costumbres", p: [
+          "Funerales de fuego y de barco, bodas en las que los novios se intercambian armas en lugar de anillos, y festines de tres días.",
+          "Las runas azules protegen, las rojas dan furia, las blancas honran a los ancestros y las negras están prohibidas salvo en guerra."
+        ]}
+      ]
+    },
+
+    {
+      slug: "tierras-volcanicas-de-vrakk",
+      title: "Tierras Volcánicas de Vrakk",
+      quote: "Aquí, la tierra respira… y su aliento es fuego.",
+      sections: [
+        { h: "Visión general", p: [
+          "Las <b>Tierras Volcánicas de Vrakk</b> son un infierno abierto en la corteza de Umbraelis: un paisaje de cráteres humeantes, ríos de magma y llanuras de ceniza que se extienden hasta donde alcanza la vista. El aire está cargado de azufre y calor abrasador, y el cielo se tiñe de rojo por la constante erupción de volcanes activos.",
+          "Se cree que este territorio nació durante la Primera Ascensión, cuando los Arcontes liberaron una energía descomunal para sellar una grieta dimensional. Desde entonces, Vrakk es una herida abierta que nunca se enfría. La propia tierra parece viva: se agita, cruje y escupe fuego como si intentara expulsar algo que late en sus entrañas."
+        ]},
+        { h: "Historia", p: [
+          "Vrakk era en tiempos antiguos el hogar de un pueblo minero y guerrero que extraía metales raros de las profundidades. Su riqueza fue su condena: los Arcontes codiciaron sus recursos para forjar armas imbuidas con almas cautivas. La resistencia de los vrakkanos provocó un castigo sin precedentes: la liberación del <b>Corazón de Fuego</b>, una fuente de magia volcánica tan potente que arrasó toda la región. Las leyendas aseguran que el Corazón aún palpita bajo el Monte Korr’Zhul."
+        ]},
+        { h: "Cultura y sociedad", ul: [
+          "<b>Clanes de Hierro Fundido.</b> Descendientes de los mineros originales, adaptados a la vida en túneles cercanos al magma.",
+          "<b>Forjadores del Alma.</b> Herreros solitarios que trabajan con metal embrujado para crear armas únicas… o malditas.",
+          "<b>Bestias Magmáticas.</b> Criaturas que surgen de las fisuras para cazar y desaparecer en el fuego."
+        ]},
+        { h: "Facciones y personajes clave", ul: [
+          "<b>Korr’Zhul Dormido.</b> Gigante elemental atrapado bajo el monte principal, cuyas «pesadillas» provocan erupciones.",
+          "<b>Maela la Forjamuerte.</b> Maestra herrera capaz de trabajar metal mezclado con fragmentos de alma.",
+          "<b>Los Hijos del Corazón.</b> Fanáticos que quieren liberar por completo el Corazón de Fuego."
+        ]},
+        { h: "Peculiaridades y peligros", ul: [
+          "<b>Lluvias de Ceniza.</b> Reducen la visibilidad y provocan asfixia.",
+          "<b>Flujos de Magma Vivo.</b> El magma aquí actúa como un ente consciente que persigue el calor vital.",
+          "<b>Temblores Encadenados.</b> Pequeñas sacudidas que preceden a eventos catastróficos."
+        ]}
+      ]
+    },
+
+    {
+      slug: "valle-de-askhaar",
+      title: "Valle de Askhaar",
+      quote: "Aquí el viento aún recuerda los nombres de las ciudades que ya no están.",
+      map: "img/llanuras-de-askhaar.jpg",
+      mapCaption: "Las Llanuras de Askhaar",
+      sections: [
+        { h: "Visión general", p: [
+          "El <b>Valle de Askhaar</b>, el Corredor del Yugo, es la gran llanura de tierra rojiza y colinas bajas que se extiende entre las tierras volcánicas de <b>Vrakk</b>, al norte, y el <b>Bosque Cadavérico</b>, al sur. Al oeste, el camino conduce hacia Tirak Thal; al este, hacia <b>Ubídume</b>, y en ese borde oriental se alza la fortaleza de <b>Mal-Karrith</b>, «la Cancela de Hierro».",
+          "Fue siempre tierra de jinetes y rebaños, de horizontes abiertos y cultura ecuestre de raíz sármata. Hoy es otra cosa: un corredor militar disputado, recorrido por patrullas y caravanas armadas, donde cada ciudad en pie parece una excepción."
+        ]},
+        { h: "Historia", p: [
+          "Durante generaciones, el valle fue el hogar de los <b>vrakhari</b>, un pueblo de ciudades hermanas, jinetes acorazados y pastores trashumantes. Sus ciudades se alineaban a lo largo del corredor, al sur junto al linde del Bosque Cadavérico y al norte a los pies de las montañas.",
+          "El <b>Yugo</b> lo cambió todo. Ciudad tras ciudad fue tomada y arrasada, hasta que el valle se convirtió en un cementerio de ciudades."
+        ], ul: [
+          "<b>Vorlanthe, la Ciudad Vencida.</b> Gran ruina a los pies de Mal-Karrith, que aún conserva la memoria de la resistencia.",
+          "<b>Las Ciudades Ceniza.</b> Karlanthe, Duvorra, Eskvarr y Tholanthe, tomadas y destruidas sobre el borde del Bosque Cadavérico."
+        ]},
+        { h: "Cultura y sociedad", p: [
+          "Los vrakhari que sobreviven viven entre las ruinas de lo que fueron: jinetes sin ciudad, refugiados de todas las comarcas, pastores que siguen moviendo sus rebaños por tierras que ya no son suyas. Hablan distintos dialectos, pero comparten la misma mirada de quien ya ha perdido su casa una vez.",
+          "El valle sigue siendo tierra de caballos y de lanzas. Quien lo cruza aprende pronto que aquí la confianza se gana despacio y se pierde deprisa."
+        ]},
+        { h: "Lugares y facciones clave", ul: [
+          "<b>Vareth.</b> La única ciudad vrakhari que aún resiste en el corredor. Amurallada, abarrotada de refugiados y sostenida a pulso, es la última llama del valle.",
+          "<b>Los Jinetes Rotos.</b> Pequeña fuerza de jinetes vrakhari libres, sin juramento a ninguna de las casas de Vrakk. Sostienen las puertas de Vareth.",
+          "<b>Mal-Karrith, la Cancela de Hierro.</b> Fortaleza levantada en basalto negro y hierro, que cierra el paso hacia Ubídume.",
+          "<b>El Campamento del Yugo.</b> Gran campamento fortificado sobre la ruta principal del valle, base de las fuerzas que lo vigilan.",
+          "<b>La Ruta de las Caravanas Rojas.</b> Camino empedrado que cruza el valle de norte a sur, la vía más transitada y la más vigilada.",
+          "<b>Las casas de Vrakk.</b> Melqar, Korruval y Dravok, señores de las montañas del norte, que observan el valle desde sus fortalezas."
+        ]},
+        { h: "Peculiaridades y peligros", ul: [
+          "<b>Ciudades muertas.</b> Ruinas silenciosas a lo largo del corredor, donde conviene no acampar.",
+          "<b>Patrullas y puestos del Yugo.</b> Fortines que controlan los caminos y cobran con sangre a quien no paga.",
+          "<b>Refugiados y salteadores.</b> La desesperación convierte a vecinos en peligros.",
+          "<b>El borde del Bosque Cadavérico.</b> Al sur, la llanura termina contra una línea de árboles muertos de la que es mejor no acercarse."
+        ]}
+      ]
+    },
+
+    {
+      slug: "bosque-cadaverico",
+      title: "Bosque Cadavérico",
+      quote: "Aquí, hasta las hojas tienen hambre.",
+      sections: [
+        { h: "Visión general", p: [
+          "El <b>Bosque Cadavérico</b> se extiende como una herida oscura en el mapa de Umbraelis: un lugar donde la luz apenas penetra, el aire huele a tierra podrida y la vegetación parece más hueso que madera. Sus árboles, retorcidos y huecos, están cubiertos de líquenes blanquecinos que recuerdan la piel de un cadáver, y en sus raíces anidan criaturas que se alimentan de carne… y de recuerdos.",
+          "No es un bosque muerto, sino <b>un bosque que se alimenta de la muerte</b>. Las leyendas dicen que surgió cuando un Arconte selló aquí a un dios moribundo, cuyo cuerpo se pudrió hasta convertirse en tierra fértil para horrores. Cada año, su latido residual convoca una <b>Noche de Hambre</b>, donde las raíces se mueven, los troncos se agrietan y el bosque sale a cazar."
+        ]},
+        { h: "Historia", p: [
+          "Antaño, el lugar era un bosque sagrado llamado <b>Sylthar</b>, protegido por druidas y espíritus guardianes. La Primera Ascensión lo condenó cuando un Arconte lo convirtió en un santuario profano para experimentar con necromancia vegetal. La fusión de magia de vida y magia de muerte dio origen a este ecosistema antinatural, que desde entonces crece alimentándose de la carne de todo lo que entra."
+        ]},
+        { h: "Cultura y sociedad", p: ["Nadie habita en el Bosque Cadavérico de forma permanente, pero:"], ul: [
+          "<b>Los Cosechadores de Sombra</b> se adentran para recolectar savia negra, muy valiosa como veneno o componente ritual.",
+          "<b>Ermitaños de la Podredumbre</b> viven en chozas de hueso y corteza, adorando al supuesto dios enterrado.",
+          "Criaturas vegetomórficas acechan en silencio a los incautos."
+        ]},
+        { h: "Facciones y personajes clave", ul: [
+          "<b>El Enraizado.</b> Un ser semihumano, semiarbóreo, que asegura ser la voz del dios muerto.",
+          "<b>Los Cosechadores de Sombra.</b> Contrabandistas de savia negra que comercian con nigromantes.",
+          "<b>La Doncella de Corteza.</b> Aparición que guía o engaña a los viajeros con igual facilidad."
+        ]},
+        { h: "Peculiaridades y peligros", ul: [
+          "<b>Savia Negra.</b> Viscosa, corrosiva para la carne, embriagadora para el espíritu.",
+          "<b>Raíces Errantes.</b> Se mueven bajo tierra para atrapar y drenar víctimas.",
+          "<b>Hongos de Memoria.</b> Consumirlos otorga visiones… a costa de perder recuerdos reales."
+        ]}
+      ]
+    },
+
+    {
+      slug: "mar-de-las-cenizas",
+      title: "Mar de las Cenizas",
+      quote: "Donde las olas llevan huesos… y las velas, mentiras.",
+      sections: [
+        { h: "Visión general", p: [
+          "El <b>Mar de las Cenizas</b> es un vasto y opresivo océano gris donde el agua parece mezclada con polvo y hollín. Las olas rompen con un sonido hueco, como si algo las ahogara desde abajo. La visibilidad rara vez supera el horizonte cercano: una bruma perpetua cubre el mar, difuminando los límites entre cielo y agua.",
+          "Navegar por él es arriesgarse a perderse para siempre, no solo por las corrientes impredecibles, sino por las <b>flotas piratas</b> que lo patrullan. Estos corsarios, los <b>Hijos de la Ceniza</b>, son más que saqueadores: se dice que sellan pactos con espíritus marinos y beben sangre mezclada con agua del propio mar para asegurar que sus almas siempre encuentren el camino de regreso… aunque sea al fondo."
+        ]},
+        { h: "Historia", p: [
+          "Antes de la Primera Ascensión, el Mar de las Cenizas era una ruta comercial vital que conectaba varias ciudades-estado costeras. Durante la guerra, los Arcontes lo maldijeron al hundir en sus profundidades una flota enemiga junto con un artefacto prohibido. La maldición convirtió sus aguas en una tumba líquida que nunca se calma.",
+          "Los marinos aseguran que, en noches sin luna, es posible ver a los barcos hundidos navegando de nuevo, tripulados por esqueletos envueltos en algas, en busca de venganza contra cualquier embarcación viva."
+        ]},
+        { h: "Cultura y sociedad", ul: [
+          "<b>Pueblos flotantes</b> formados por embarcaciones unidas, donde se intercambian bienes y favores.",
+          "<b>Tripulaciones piratas</b> que saquean, comercian con esclavos y trafican reliquias del fondo.",
+          "<b>Ermitas de vigías</b> en islotes, donde solitarios envían señales de humo o fuego para advertir de ataques."
+        ]},
+        { h: "Facciones y personajes clave", ul: [
+          "<b>Los Hijos de la Ceniza.</b> Confederación de capitanes piratas que obedecen un código sangriento.",
+          "<b>Capitana Syrrha Diente de Coral.</b> Maestra en emboscadas y portadora de un timón encantado que puede cambiar el rumbo del viento."
+        ]},
+        { h: "Peculiaridades y peligros", ul: [
+          "<b>El Guardián del Faro Hundido.</b> Un espectro que guía a las naves a su perdición.",
+          "<b>Tormentas de Ceniza.</b> Reducen la visibilidad a pocos metros y abrasan la piel.",
+          "<b>Aguas Engullidoras.</b> Remolinos que arrastran barcos a grutas subacuáticas.",
+          "<b>Barcos Fantasma.</b> Aparecen repentinamente y desaparecen igual de rápido."
+        ]}
+      ]
+    },
+
+    {
+      slug: "cadena-montanosa-de-las-sombras",
+      title: "Cadena Montañosa de las Sombras",
+      quote: "Bajo estas cumbres, el pasado nunca duerme.",
+      sections: [
+        { h: "Visión general", p: [
+          "La <b>Cadena Montañosa de las Sombras</b> se alza como un muro oscuro entre regiones, una sucesión de picos afilados y laderas cubiertas por una niebla densa que rara vez se disipa. A la luz del amanecer, las sombras proyectadas por sus cumbres forman figuras imposibles que parecen moverse… o vigilar.",
+          "No es la altura lo que vuelve peligroso este lugar, sino lo que se oculta <b>debajo</b>: una red de túneles ancestrales, tallados mucho antes de la Primera Ascensión, que conecta con cámaras subterráneas, ruinas olvidadas y templos caídos. Muchos pasajes están derrumbados o plagados de trampas, pero otros llevan a tesoros… y a horrores que nunca deberían haber sido despertados."
+        ]},
+        { h: "Historia", p: [
+          "La tradición oral de las tribus cercanas afirma que la cadena fue el corazón de un reino subterráneo desaparecido, <b>Thur-Vael</b>, hogar de artesanos y magos que trabajaban la piedra y el metal con un dominio insuperable. Cuando los Arcontes iniciaron su ascenso, Thur-Vael intentó sellar sus túneles para evitar la invasión… pero algo desde dentro comenzó a devorar su imperio. Hoy solo quedan ruinas a medio colapsar, pasajes que se hunden en la oscuridad y guardianes espectrales que aún patrullan las cámaras sagradas."
+        ]},
+        { h: "Cultura y sociedad", p: ["No hay asentamientos permanentes en la zona, pero:"], ul: [
+          "<b>Clanes nómadas</b> usan entradas ocultas para refugiarse durante las tormentas.",
+          "<b>Buscadores de eco</b> (arqueólogos, mercenarios y saqueadores) recorren los túneles en busca de artefactos.",
+          "<b>Guardianes Encadenados</b> protegen los accesos más profundos, siguiendo juramentos de un reino que ya no existe."
+        ]},
+        { h: "Facciones y personajes clave", ul: [
+          "<b>Los Guardianes Encadenados.</b> Espíritus armados con armaduras negras, vinculados a los juramentos de Thur-Vael.",
+          "<b>Maerkos el Sombrista.</b> Contrabandista que usa los túneles para mover mercancías prohibidas.",
+          "<b>La Voz Hueca.</b> Eco persistente de un mago de Thur-Vael que aún susurra en las profundidades."
+        ]},
+        { h: "Peculiaridades y peligros", ul: [
+          "<b>Colapsos súbitos.</b> Derrumbes que pueden aislar a los viajeros.",
+          "<b>Ecos Desorientadores.</b> Sonidos que confunden la orientación en los túneles.",
+          "<b>Runas Inestables.</b> Antiguas defensas mágicas que reaccionan de forma impredecible."
+        ]}
+      ]
+    },
+
+    {
+      slug: "karthane",
+      title: "Karthane",
+      quote: "Siete bastiones, un juramento: jamás caer.",
+      sections: [
+        { h: "Visión general", p: [
+          "Karthane es una leyenda con muros. Desde fuera, pocos creen que exista; para los que han visto sus torres, es una fortaleza inmortal. Está compuesta por <b>siete bastiones ciclópeos</b>, unidos por puentes elevados que forman una muralla de hierro y piedra contra el avance de los Arcontes Nigromantes y sus ejércitos no muertos.",
+          "Durante siglos, Karthane ha resistido asedios ininterrumpidos gracias a su arquitectura impenetrable, su disciplina militar y su aislamiento casi absoluto. Pero la fuerza de sus muros es igualada por la rigidez de su sociedad: puertas siempre cerradas, leyes severas y castigos públicos que aseguran el orden. Los extranjeros rara vez son admitidos, y muchos han muerto intentando cruzar sus umbrales. Dentro, la aparente prosperidad oculta una decadencia moral corrosiva: la nobleza vive para intrigas cortesanas, el pueblo obedece sin rechistar, y la compasión es un lujo que pocos pueden permitirse."
+        ]},
+        { h: "Historia", p: [
+          "Fundada durante la Primera Ascensión, Karthane fue concebida como <b>la última fortaleza</b> de la humanidad frente a la corrupción. La leyenda cuenta que sus siete bastiones fueron levantados sobre siete colinas, cada uno custodiado por una casa noble con su propio escudo, ejército y tradiciones. En un pacto ancestral, las casas juraron mantener sus puertas cerradas al mundo exterior hasta que el peligro de los Arcontes desapareciera… algo que, siglos después, aún no ha ocurrido."
+        ]},
+        { h: "Cultura y sociedad", p: [
+          "La nobleza controla todos los recursos y dicta leyes férreas; el pueblo vive bajo disciplina militar, entrenado para resistir asedios y servir en las defensas. La moral pública se sustenta en honor, obediencia y deber… aunque la corrupción política es tan antigua como las murallas. Los siete bastiones tienen especializaciones propias: forja, víveres, defensa de muros, logística, artes arcanas, archivo histórico y diplomacia interna."
+        ]},
+        { h: "Facciones y personajes clave", ul: [
+          "<b>Conde Vaelor Varendor.</b> Señor del Bastión Varendor, estratega implacable.",
+          "<b>La Guardia de Hierro.</b> Cuerpo de élite que patrulla murallas y puentes elevados.",
+          "<b>El Consejo de Siete.</b> Asamblea de los señores de cada bastión, más interesados en la política interna que en el exterior."
+        ]},
+        { h: "Peculiaridades y peligros", ul: [
+          "<b>Puertas Infranqueables.</b> Se abren solo por orden del Consejo y bajo juramento sagrado.",
+          "<b>Asedios Perpetuos.</b> Ejércitos no muertos acampan eternamente en la periferia.",
+          "<b>Intriga Interna.</b> Alianzas y traiciones dentro del Consejo pueden cambiar el destino de la ciudad."
+        ]}
+      ]
+    },
+
     {
       slug: "cyrith-aer",
       title: "Cyrith Aer",
@@ -583,6 +604,7 @@ window.UMBRAELIS = {
         ]}
       ]
     },
+
     {
       slug: "ciryx",
       title: "Ciryx",
@@ -602,6 +624,7 @@ window.UMBRAELIS = {
         ]}
       ]
     },
+
     {
       slug: "cordillera-de-kartus",
       title: "Cordillera de Kartus",
@@ -631,6 +654,7 @@ window.UMBRAELIS = {
         ]}
       ]
     },
+
     {
       slug: "issardi",
       title: "Issardi",
@@ -657,6 +681,7 @@ window.UMBRAELIS = {
         ]}
       ]
     },
+
     {
       slug: "zetyar",
       title: "Zetyar",
