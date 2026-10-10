@@ -273,6 +273,7 @@ footer a{color:var(--muted);text-decoration:underline}
         '<p class="pitch">'+esc(I.pitch)+'</p>'+
         (I.pitch2 ? '<p class="pitch">'+esc(I.pitch2)+'</p>' : '')+
         '<p class="motto">'+esc(I.motto)+'</p>'+
+        '<div class="temabox" style="max-width:520px;margin:1.4em auto 0"><span>♪ Tema de Umbraelis</span><audio controls preload="none" src="audio/inicio.mp3"></audio></div>'+
         '<div class="btns"><a class="btn solid" href="#/mapa">Explorar el mapa</a><a class="btn" href="#/historia">Orígenes</a></div>'+
       '</div></section>'+
       (I.tone ? '<section class="tonebar"><div class="wrap tone">'+I.tone.map(function(x){return '<div><h4>'+esc(x.h)+'</h4><p>'+esc(x.t)+'</p></div>';}).join('')+'</div></section>' : '')+
