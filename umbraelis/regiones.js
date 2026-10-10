@@ -713,6 +713,11 @@ window.UMBRAELIS = {
         { h: "Historia", p: [
           "La Cordillera de Kartus fue santificada en la <b>Era del Juramento</b>, cuando los dioses confiaron a los Aetheris una misión sagrada. Durante milenios, estos guardianes han vigilado las rutas de acceso, manteniendo oculto lo que custodian. Con el paso de los siglos, las fortalezas se han convertido en monasterios guerreros donde se entrenan generaciones enteras de Aetheris. Sus rituales mezclan plegarias al alba con un estricto adiestramiento marcial y místico."
         ]},
+        { h: "Los huesos de los titanes", img: "cordillera-de-kartus", p: [
+          "En lo alto de Kartus hay cosas que no son montaña. Arcos de hueso del ancho de una torre, costillares que se alzan sobre los valles nevados y vértebras enterradas hasta el cuello bajo la nieve eterna. Los pueblos del norte dicen que son los <b>titanes</b>, que murieron aquí en la edad de los dioses y que nadie se atrevió nunca a enterrarlos.",
+          "Los <b>Järvik</b> los veneran como antepasados de la fuerza y se niegan a pisar sus restos con calzado de hierro. Los <b>Aetheris</b> los custodian en silencio: sus monasterios guardan <b>fragmentos sellados</b> que no deben salir de la cordillera. Y los <b>Arcontes</b> quieren los huesos sellados o hechos polvo, porque temen lo que esa resistencia antigua aún despierta en el norte.",
+          "Se cuenta que el polvo de un hueso de titán da una furia que no es humana, y que quien la bebe con frecuencia deja de serlo. Por eso los huesos se vigilan, se codician y, a veces, se roban."
+        ]},
         { h: "Los Aetheris", ul: [
           "<b>Descendencia celestial.</b> Se dice que en su sangre corre un vestigio del poder divino.",
           "<b>Juramento inquebrantable.</b> El deber está por encima de la vida, la libertad o el deseo personal.",
@@ -726,7 +731,8 @@ window.UMBRAELIS = {
         { h: "Peculiaridades y peligros", ul: [
           "<b>Nieves Eternas.</b> Tormentas súbitas capaces de borrar caravanas enteras.",
           "<b>Rutas Veladas.</b> Senderos que cambian bajo la influencia de la magia Aetheris.",
-          "<b>Centinelas Celestes.</b> Espíritus de antiguos guardianes que vigilan los pasos."
+          "<b>Centinelas Celestes.</b> Espíritus de antiguos guardianes que vigilan los pasos.",
+          "<b>Pasos entre huesos.</b> Algunas rutas cruzan por entre los restos de los titanes, y el hueso atrae a las criaturas primordiales."
         ]}
       ]
     },
