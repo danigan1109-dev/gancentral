@@ -192,7 +192,7 @@ footer a{color:var(--muted);text-decoration:underline}
 </footer>
 <noscript><p style="padding:40px;text-align:center">Esta página necesita JavaScript para mostrar el mapa y las regiones.</p></noscript>
 
-<script src="regiones.js?v=6"></script>
+<script src="regiones.js?v=7"></script>
 <script>
 (function(){
   var D = window.UMBRAELIS, app = document.getElementById('app');
@@ -327,7 +327,7 @@ footer a{color:var(--muted);text-decoration:underline}
       : '<section class="rhero"><div class="bg" id="rbg" style="background-color:#17120e;background-image:'+fallback(slug)+'"></div><div class="sh"></div>'+
           '<div class="wrap in"><div class="crumb">'+esc(crumb)+'</div><h1>'+esc(data.title)+'</h1><p class="q">'+esc(data.quote)+'</p></div></section>';
     app.innerHTML = hero+
-      '<article class="body">'+(data.audio ? '<div class="temabox"><span>♪ Tema de la región</span><audio controls preload="none" src="audio/'+data.audio+'.mp3"></audio></div>' : '')+renderSections(data.sections)+fig+'</article>'+
+      '<article class="body">'+(data.audio ? '<div class="temabox"><span>♪ Tema '+(isPj ? 'del personaje' : 'de la región')+'</span><audio controls preload="none" src="audio/'+data.audio+'.mp3"></audio></div>' : '')+renderSections(data.sections)+fig+'</article>'+
       '<div class="pn">'+nav+'</div>';
     var rb = document.getElementById('rbg');
     setBg(rb, 'img/'+slug+'.jpg', isPj ? null : function(){ rb.parentNode.classList.add('pend'); mapCss(rb, slug, 2.3); });

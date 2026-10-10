@@ -109,7 +109,7 @@ window.UMBRAELIS = {
       ]
     },
     {
-      slug: "pj-yvaria", title: "Yvaria Skykin", linea: "Skykin · Cyrith Aer", jugador: "Ana", caido: true,
+      slug: "pj-yvaria", title: "Yvaria Skykin", linea: "Skykin · Cyrith Aer", jugador: "Ana", caido: true, audio: "pj-yvaria",
       quote: "La Hija del Viento Caído.",
       sections: [
         { h: "Origen", p: [
