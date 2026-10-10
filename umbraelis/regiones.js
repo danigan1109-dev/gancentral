@@ -357,27 +357,46 @@ window.UMBRAELIS = {
       slug: "paramos-del-sur",
       title: "Páramos del Sur",
       quote: "En el silencio del desierto, cada sombra tiene un precio.",
+      audio: "paramos-del-sur",
       sections: [
         { h: "Visión general", p: [
           "Los <b>Páramos del Sur</b> son un mar de arena y piedra quebrada que se extiende hasta donde alcanza la vista. Bajo un sol implacable y noches heladas, las caravanas de los clanes Katari cruzan rutas invisibles, guiadas por estrellas y leyendas. No hay ciudades permanentes: la vida aquí es movimiento, desconfianza y supervivencia.",
-          "Entre los Katari, el <b>Clan Nahir</b> se distingue no por la fuerza bruta, sino por su maestría en las artes de la intriga, el asesinato y la diplomacia venenosa. Temidos y respetados a partes iguales, sus emisarios rara vez viajan solos, y sus enemigos rara vez viven para contarlo."
+          "Entre los Katari, el <b>Clan Nahir</b> se distingue no por la fuerza bruta, sino por su maestría en las artes de la intriga, el asesinato y la diplomacia venenosa. Temidos y respetados a partes iguales, sus emisarios rara vez viajan solos, y sus enemigos rara vez viven para contarlo.",
+          "Donde el desierto se rinde al mar, la costa esconde otro mundo: calas de contrabando, ruinas hundidas y una cofradía de piratas que no responde ante ningún Arconte."
         ]},
         { h: "Historia", p: [
           "Los Páramos fueron antaño un corredor de comercio que unía el corazón de Umbraelis con sus costas meridionales. La llegada de los Arcontes Nigromantes forzó a los clanes a abandonar las rutas abiertas y refugiarse en la movilidad. Con el tiempo, las caravanas se convirtieron en fortalezas itinerantes, y el comercio dio paso a la política tribal.",
           "El Clan Nahir surgió como mediador entre conflictos, pero su «diplomacia» siempre fue acompañada de desapariciones oportunas. El Consejo de Sombras que gobierna el clan dicta sentencias que se ejecutan en silencio."
         ]},
+        { h: "La costa: Cala del Vigía Caído", img: "cala-vigia", p: [
+          "<i>«Antes de ser un puerto, fue una tumba. Antes de ser una tumba, fue un juramento.»</i>",
+          "Al sur de Tirak Thal, oculta tras un acantilado que la esconde de cualquiera que no sepa que está ahí, se abre una cala en forma de fiordo. Su boca es un canal estrecho entre dos agujas de roca, <b>Los Centinelas</b>: cuenta la leyenda que un vigía solitario se quedó en su puesto entre ellas hasta ahogarse antes que abandonarlo.",
+          "Hoy es un amasijo de cabañas de pescadores convertidas en almacenes de contrabando, con una taberna tallada en la propia roca, <b>El Farol Sordo</b>, y un mercado negro discreto de reliquias sacadas de Thalyssar. Para quien llega al Mar de las Cenizas por tierra desde Tirak Thal, es la puerta de entrada más habitual."
+        ]},
+        { h: "Las ruinas de Thalyssar", img: "ruinas-thalyssar", p: [
+          "Más allá de la cala se extiende un archipiélago hundido de torres ciclópeas medio sumergidas. Con la marea baja se ven calles bajo el agua, y quedan cámaras secas que aún guardan reliquias de un imperio caído.",
+          "Entre las ruinas se alzan los <b>Faros Ciegos</b>, tres torres que siguen en pie. Dicen que sus antiguos vigías continúan atados a su puesto por un juramento que ni la muerte pudo romper."
+        ]},
         { h: "Cultura y sociedad", ul: [
-          "<b>Clanes Katari.</b> Nómadas organizados en caravanas familiares y militares, expertos en la supervivencia extrema.",
+          { img: "pnj-katari", t: "<b>Clanes Katari.</b> Nómadas organizados en caravanas familiares y militares, expertos en la supervivencia extrema." },
           "<b>Clan Nahir.</b> El más temido en las artes del veneno, la infiltración y la eliminación selectiva.",
           "<b>Ley de Arena y Acero.</b> Un código oral que regula los duelos, las venganzas y el comercio."
         ]},
         { h: "Facciones y personajes clave", ul: [
-          "<b>Consejo de Sombras.</b> Órgano secreto de líderes Nahiri que deciden la política y las muertes necesarias."
+          { img: "pnj-consejo-sombras", t: "<b>Consejo de Sombras.</b> Órgano secreto de líderes Nahiri que deciden la política y las muertes necesarias." },
+          "<b>La Cofradía de las Cenizas.</b> Confederación de cuadrillas piratas del Mar de las Cenizas, unidas por el Código Sangriento. Su primera regla: no se traiciona en la Cala.",
+          { img: "pnj-larissa", audio: "pnj-larissa", t: "<b>Larissa, el Eco Roto.</b> Capitana de la cuadrilla de la Cala del Vigía Caído. Complexión media, ropa de faena más que de capitana y una voz baja que obliga a acercarse. Lleva tatuada en la muñeca la campana partida de su nave. Prefiere que la subestimen. Nunca amenaza en voz alta, cultiva deudas de favor como otros cultivan oro, y nadie hace un trato con ella sin acabar debiéndole algo." },
+          "<b>Jorren Vael, capitán del Alba Marchita.</b> <i>«El mar no castiga. Solo devuelve lo que uno lanza a sus aguas.»</i> Veterano de la Marina del Reino de Tharn en la Guerra de las Mareas. Sereno, de humor seco y melancólico, no es un hombre de fe, pero sí de promesas. Se mueve en los círculos de la Cofradía, aunque no siempre comparte sus métodos: más contrabandista con principios que saqueador.",
+          { img: "pnj-alba-marchita", t: "<b>El Alba Marchita.</b> <i>«No fue construido... fue rescatado. Cada tabla, cada vela, cada clavo parece haber pertenecido a un barco distinto. Por eso el mar nunca sabe si hundirlo o dejarlo pasar.»</i> Corbeta ligera de tres palos, de madera ennegrecida por la sal y velas gris ceniza llenas de parches, reparada con piezas de ingeniería thalyssariana, madera de otros barcos y metal arcano. Su mascarón, una mujer erosionada con el rostro cubierto por un velo metálico, dicen que llora con la marea alta. Es ágil y se cuela en fiordos y nieblas donde otros no se atreven. Los marineros aseguran que el barco respira. Su tripulación la forman Varr Tulek, Mekra «Tuerca», Lirieth y las gemelas Ribbet." },
+          { img: "pnj-hijos-del-yugo", audio: "pnj-hijos-del-yugo", t: "<b>Los Hijos del Yugo.</b> Las Caravanas Rojas de los Arcontes: largas columnas de carros cubiertos de telas rojas que cruzan estepas y desiertos escoltadas por jinetes encapuchados. Se dice que llevan almas hacia las fortalezas de hierro de los Arcontes. Nadie las detiene, y quien las sigue demasiado tiempo con la mirada suele lamentarlo." },
+          { img: "pnj-ladrones-viento", t: "<b>Los Ladrones del Viento.</b> Bandidos de los Páramos, mercenarios zetarianos renegados que viven de asaltar caravanas y viajeros. Embozados en capas de arena y trapo, aparecen y desaparecen con las tormentas de polvo." }
         ]},
         { h: "Peculiaridades y peligros", ul: [
           "<b>Tormentas de Vidrio.</b> Ráfagas que levantan arena mezclada con fragmentos de cristal afilado.",
           "<b>Oasis Envenenados.</b> Manantiales contaminados deliberadamente por clanes rivales.",
-          "<b>Caravanas Fantasma.</b> Restos malditos de expediciones que nunca regresaron."
+          "<b>Caravanas Fantasma.</b> Restos malditos de expediciones que nunca regresaron.",
+          "<b>El canal de Los Centinelas.</b> Solo es seguro a ciertas horas de marea: equivocarse de hora puede costar el casco de un barco.",
+          "<b>El vigía caído.</b> Superstición local: quien lo insulta de noche amanece con las botas empapadas, por lejos que haya dormido del agua."
         ]}
       ]
     },
