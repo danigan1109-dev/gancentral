@@ -705,6 +705,7 @@ window.UMBRAELIS = {
       slug: "cordillera-de-kartus",
       title: "Cordillera de Kartus",
       quote: "Donde descansan los huesos de titanes.",
+      audio: "cordillera-de-kartus",
       sections: [
         { h: "Visión general", p: [
           "En el <b>Reino Lejano</b>, al norte de Umbraelis, se alza la <b>Cordillera de Kartus</b>, bastión de los Aetheris: una muralla natural de cumbres nevadas y riscos afilados. Entre sus picos se ocultan fortalezas de piedra blanca y cristal bruñido, invisibles para los no iniciados. Allí residen los <b>Aetheris</b>, descendientes de guardianes celestiales que antaño sirvieron directamente a los Dioses Antiguos.",
