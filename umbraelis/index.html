@@ -84,6 +84,16 @@ nav a:hover{background:var(--bg3);text-decoration:none;color:var(--gold)}
 .hot span{position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);white-space:nowrap;background:rgba(14,11,9,.96);border:1px solid var(--gold);color:var(--text);font-family:var(--title);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 11px;border-radius:5px;opacity:0;pointer-events:none;transition:opacity .15s;z-index:3}
 .hot:hover span,.hot:focus span{opacity:1}
 .hot:hover,.hot:focus{z-index:5;background:rgba(216,180,106,.4);outline:none}
+.ruta{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;display:none}
+.mapbox.ver-ruta .ruta,.mapbox.ver-ruta .rp{display:block}
+.ruta path{fill:none;stroke:#f0cd78;stroke-width:3;stroke-dasharray:7 6;stroke-linecap:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 2px rgba(0,0,0,.8))}
+.rp{position:absolute;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:#140e08;border:2px solid #f0cd78;display:none;z-index:2}
+.rp.now{width:20px;height:20px;background:#dc5037;border-color:#dc5037;box-shadow:0 0 0 6px rgba(220,80,55,.25)}
+.rp.now::before{content:"";position:absolute;inset:-12px;border-radius:50%;border:1px solid #dc5037;animation:pulse 2.4s infinite}
+.btnruta{display:block;margin:14px auto 0;background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:6px;padding:9px 18px;font-family:var(--title);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.btnruta:hover,.btnruta[aria-pressed=true]{background:rgba(216,180,106,.18)}
+.rleg{display:none;text-align:center;color:var(--muted);font-size:.9rem;margin-top:8px}
+.rleg.on{display:block}
 .hint{text-align:center;color:var(--muted);font-size:.95rem;margin-top:12px}
 
 /* tarjetas */
@@ -164,7 +174,7 @@ footer a{color:var(--muted);text-decoration:underline}
 </footer>
 <noscript><p style="padding:40px;text-align:center">Esta página necesita JavaScript para mostrar el mapa y las regiones.</p></noscript>
 
-<script src="regiones.js?v=2"></script>
+<script src="regiones.js?v=3"></script>
 <script>
 (function(){
   var D = window.UMBRAELIS, app = document.getElementById('app');
@@ -208,6 +218,14 @@ footer a{color:var(--muted);text-decoration:underline}
       var r = bySlug[h.slug]; if(!r) return '';
       return '<a class="hot" href="#/'+h.slug+'" style="left:'+h.x+'%;top:'+h.y+'%" aria-label="'+esc(r.title)+'"><span>'+esc(r.title)+'</span></a>';
     }).join('');
+    var RU = D.ruta, ruta = '';
+    if (RU){
+      ruta = '<svg class="ruta" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">'+RU.legs.map(function(l){
+        return '<path d="M'+l.map(function(q){return q[0]+' '+q[1];}).join(' L')+'"/>';
+      }).join('')+'</svg>'+RU.puntos.map(function(q){
+        return '<i class="rp" style="left:'+q.x+'%;top:'+q.y+'%" title="'+esc(q.t)+'"></i>';
+      }).join('')+'<i class="rp now" style="left:'+RU.actual.x+'%;top:'+RU.actual.y+'%" title="'+esc(RU.actual.t)+'"></i>';
+    }
     var cards = R.map(function(r){
       return '<a class="card" href="#/'+r.slug+'"><div class="bg" data-slug="'+r.slug+'" style="background-color:#17120e;background-image:'+fallback(r.slug)+'"></div><div class="sh"></div>'+
              '<div class="tx"><h3>'+esc(r.title)+'</h3><p>'+esc(r.quote)+'</p></div></a>';
@@ -226,7 +244,8 @@ footer a{color:var(--muted);text-decoration:underline}
       '<section class="sec" id="mapa"><div class="wrap">'+
         '<h2 class="t">El mapa de Umbraelis</h2><div class="sep"></div>'+
         '<p class="sub">Pasa el cursor por los puntos y entra en cada región.</p>'+
-        '<div class="mapbox"><img src="img/mapa-mundo.jpg" alt="Mapa del mundo de Umbraelis">'+hs+'</div>'+
+        '<div class="mapbox"><img src="img/mapa-mundo.jpg" alt="Mapa del mundo de Umbraelis">'+ruta+hs+'</div>'+
+        (RU ? '<button class="btnruta" id="btnruta" aria-pressed="false">Ver la ruta de la campaña</button><p class="rleg" id="rleg">Línea punteada: el camino ya recorrido. Punto rojo: donde están ahora.</p>' : '')+
         '<p class="hint">En el móvil, toca un punto para abrir la región.</p>'+
       '</div></section>'+
       '<section class="sec" id="regiones" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="wrap">'+
@@ -234,6 +253,12 @@ footer a{color:var(--muted);text-decoration:underline}
         '<p class="sub">Ciudades, reinos y tierras malditas, con sus facciones y peligros.</p>'+
         '<div class="grid">'+cards+'</div>'+
       '</div></section>';
+    var bt = document.getElementById('btnruta');
+    if (bt) bt.onclick = function(){
+      var on = document.querySelector('.mapbox').classList.toggle('ver-ruta');
+      bt.setAttribute('aria-pressed', on); bt.textContent = on ? 'Ocultar la ruta' : 'Ver la ruta de la campaña';
+      document.getElementById('rleg').classList.toggle('on', on);
+    };
     document.querySelectorAll('.card .bg').forEach(function(el){
       var slug = el.getAttribute('data-slug'), i = new Image();
       i.onload = function(){ el.style.backgroundImage = 'url("img/'+slug+'.jpg")'; };

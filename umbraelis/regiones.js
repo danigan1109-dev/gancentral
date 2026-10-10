@@ -52,8 +52,6 @@ window.UMBRAELIS = {
   hotspots: [
     { slug: "cyrith-aer", x: 25.5, y: 43 },
     { slug: "bosques-de-aelvarn", x: 31, y: 31 },
-    { slug: "cyrith-aer", x: 25.5, y: 43 },
-    { slug: "bosques-de-aelvarn", x: 31, y: 31 },
     { slug: "tirak-thal", x: 30.5, y: 67 },
     { slug: "paramos-del-sur", x: 27, y: 70.5 },
     { slug: "bosque-cadaverico", x: 44, y: 63 },
@@ -68,6 +66,23 @@ window.UMBRAELIS = {
     { slug: "zetyar", x: 72.5, y: 65 },
     { slug: "issardi", x: 66.5, y: 69 }
   ],
+
+  ruta: {
+    legs: [
+      [[26,48.6],[22,53],[20,59],[19,66],[22,73],[27.5,75.5],[31.5,72.2]],
+      [[31.5,72.2],[29,70.5],[26,69],[23.5,66.6]],
+      [[23.5,66.6],[27,66.5],[30.5,67]],
+      [[30.5,67],[31.3,64.5],[32,62],[34,59.5],[36,58]]
+    ],
+    puntos: [
+      { x: 26, y: 48.6, t: "Ciryx" },
+      { x: 31.5, y: 72.2, t: "Cala del Vigía Caído" },
+      { x: 23.5, y: 66.6, t: "Ruinas de los Antiguos Zeytarianos" },
+      { x: 30.5, y: 67, t: "Tirak Thal" },
+      { x: 32, y: 62, t: "Espinazo de Zhar" }
+    ],
+    actual: { x: 36, y: 58, t: "Paso del oeste" }
+  },
 
   regiones: [
     {
