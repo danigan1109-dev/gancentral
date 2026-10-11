@@ -183,6 +183,8 @@ svg{flex:none}
 .ftyt{display:flex;gap:10px 26px;justify-content:center;flex-wrap:wrap;margin:0 0 14px}
 .ftyt a{text-decoration:none;color:var(--text)}
 .ftyt a:hover{color:var(--gold)}
+.hp{display:block;width:210px;aspect-ratio:16/9;margin:0 0 7px;border-radius:3px;background:#17120e center/cover;border:1px solid var(--line)}
+.hot.dn span{bottom:auto;top:calc(100% + 10px)}
 </style>
 </head>
 <body>
@@ -266,7 +268,7 @@ svg{flex:none}
     var I = D.intro;
     var hs = D.hotspots.map(function(h){
       var r = bySlug[h.slug]; if(!r) return '';
-      return '<a class="hot" href="#/'+h.slug+'" style="left:'+h.x+'%;top:'+h.y+'%" aria-label="'+esc(r.title)+'"><span>'+esc(r.title)+'</span></a>';
+      return '<a class="hot'+(h.y<32?' dn':'')+'" href="#/'+h.slug+'" style="left:'+h.x+'%;top:'+h.y+'%" aria-label="'+esc(r.title)+'"><span><i class="hp" data-s="'+h.slug+'"></i>'+esc(r.title)+'</span></a>';
     }).join('');
     var RU = D.ruta, ruta = '';
     if (RU){
@@ -323,6 +325,8 @@ svg{flex:none}
           '<a class="pcard" href="https://www.youtube.com/playlist?list=PLMZtjnRkggihI_zOzmqEVwiJOKW92OzWX" target="_blank" rel="noopener"><span class="pth" style="background-image:url(https://i.ytimg.com/vi/r50x1i7Cr2A/hqdefault.jpg)"></span><small>Daggerheart</small><h3>Vargärda</h3><p>La campaña del norte, entre los Järvik y los Fírvath.</p><em>Ver en YouTube →</em></a>'+
         '</div>'+
       '</div></section>';
+    var mb = document.querySelector('.mapbox');
+    if (mb) mb.addEventListener('mouseover', function(e){ var a = e.target.closest && e.target.closest('.hot'); if (!a) return; var p = a.querySelector('.hp'); if (p && !p.dataset.l){ p.dataset.l = 1; p.style.backgroundImage = 'url(img/'+p.dataset.s+'.jpg)'; } });
     var bt = document.getElementById('btnruta');
     if (bt) bt.onclick = function(){
       var on = document.querySelector('.mapbox').classList.toggle('ver-ruta');
